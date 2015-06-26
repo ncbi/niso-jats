@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ============================================================= -->
+<!-- MODULE:    Article Authoring DTD Over-ride Classes Module -->
+<!-- VERSION:   NISO 0.4 -->
+<!-- DATE:      January 2011 -->
+<!---->
+<!-- ============================================================= -->
+<!-- ============================================================= -->
+<!-- PUBLIC DOCUMENT TYPE DEFINITION -->
+<!-- TYPICAL INVOCATION -->
+<!--
+  "-//NLM//DTD JATS (Z39.96) Article Authoring DTD Over-ride Classes Module v0.4 20110131//EN"
+  Delivered as file "JATS-articleauthcustom-classes0.ent"
+-->
+<!-- ============================================================= -->
+<!-- ============================================================= -->
+<!-- SYSTEM:     Article Authoring DTD of the -->
+<!-- Archiving and Interchange DTD Suite -->
+<!---->
+<!-- PURPOSE:    To declare the Parameter Entities (PEs) used to -->
+<!-- over-ride the named element classes for the -->
+<!-- Article Authoring DTD, which was developed from -->
+<!-- the Archiving and Interchange DTD Suite. -->
+<!---->
+<!-- This DTD is a more prescriptive and limited DTD -->
+<!-- than are the Publishing or Archiving DTDs. -->
+<!---->
+<!-- Note: Since PEs must be declared before they -->
+<!-- are used, this module must be called before the -->
+<!-- content modules that declare elements, and before -->
+<!-- the Suite default classes module. -->
+<!---->
+<!-- CONTAINS:   1) PEs for changing the contents of the Suite -->
+<!-- default element classes -->
+<!---->
+<!-- CREATED FOR: -->
+<!-- Digital Archive of Journal Articles -->
+<!-- National Center for Biotechnology Information -->
+<!-- (NCBI) -->
+<!-- National Library of Medicine (NLM) -->
+<!---->
+<!-- ORIGINAL CREATION DATE: -->
+<!-- June 2005 -->
+<!---->
+<!-- CREATED BY: Deborah Lapeyre (Mulberry Technologies, Inc.) -->
+<!-- B. Tommie Usdin (Mulberry Technologies, Inc.) -->
+<!---->
+<!-- Suggestions for refinements and enhancements to -->
+<!-- this DTD should be sent in email to: -->
+<!-- jats@ncbi.nlm.nih.gov -->
+<!-- jats@ncbi.nlm.nih.gov -->
+<!-- ============================================================= -->
+<!-- ============================================================= -->
+<!-- DTD VERSION\CHANGE HISTORY -->
+<!-- ============================================================= -->
+<!--
+  
+       =============================================================
+  
+  Version  Reason/Occasion                   (who) vx.x (yyyy-mm-dd)
+  
+       =============================================================
+       Version 0.4                       (DAL/BTU) v0.4 (2011-01-31)
+  
+       This Tag Set is in the process of becoming a NISO standard.
+       The version numbers are starting over from 0.4", as a Trial
+       Use Draft, to be made into "Version 1.0" when the Tag Suite 
+       becomes a NISO standard. Thus, NLM "Version 3.1 Draft" has 
+       been changed to NISO "Version 0.4". No model, attribute, or
+       parameter entity changes were made as part of this renaming.
+  
+       Details on NISO Tial Use Draft Version 0.4 are available at
+             http://jats.nlm.nih.gov/JATS-0.4.
+  
+    7. Updated the public identifier to "v0.4 20110131//EN", 
+       modified the formal public identifier to include "JATS (Z39.96)",
+       and the filename as delivered to include "JATS" and the
+       new version number "0".
+  
+       =============================================================
+       Version 3.1                       (DAL/BTU) v3.1 (2010-04-30)
+  
+       Version 3.1 is fully compatible with Version 3.0.
+  
+       Details on version 3.1 are available at
+             http://jats.nlm.nih.gov/3.1.
+  
+    6. ALTERNATIVES - Added <private-char> so that the alternatives
+       wrapper may be used to hold alternative characters, some as
+       <private-char>, some as <textual-form>, some as <graphic>s,
+       etc.
+  
+    5. AFFILIATION ALTERNATIVES - Added the element <aff-alternatives>
+       to contrib-info.class to hold multiple <aff>s that are
+       representations of a single affiliation, for example, the name
+       of an institution in two languages or two scripts.
+  
+    4. NAME ALTERNATIVES - Added <name-alternatives> to
+       %name.class;, to therefore be used where name is allowed.
+  
+    3. EMPHASIS CLASS - Added <san-serif> to emphasis elements.
+  
+    2. Updated public identifier to "v3.1 20100830//EN"
+  
+       =============================================================
+       Version 3.0                       (DAL/BTU) v3.0 (2007-10-31)
+  
+       Version 3.0 is the first non-backward-compatible release.
+       In addition to the usual incremental changes, some
+       elements and attributes have been renamed and/or remodeled
+       to better meet user needs and to increase tag set consistency.
+       All module change histories are available through the Tag Suite
+       web site at http://dtd.nlm.nih.gov.
+  
+       Details on version 3.0 are available at
+             http://jats.nlm.nih.gov/3.0.
+  
+    1. Updated public identifier to "v3.0 20080202//EN"
+-->
+<!-- ============================================================= -->
+<!-- PARAMETER ENTITIES FOR CLASS OVER-RIDES -->
+<!-- ============================================================= -->
+<!-- ============================================================= -->
+<!-- OVER-RIDE INLINE CLASSES -->
+<!-- ============================================================= -->
+<!-- EMPHASIS RENDITION ELEMENTS -->
+<grammar xmlns="http://relaxng.org/ns/structure/1.0">
+  <define name="emphasis.class">
+    <choice>
+      <ref name="bold"/>
+      <ref name="italic"/>
+      <ref name="monospace"/>
+      <ref name="overline"/>
+      <ref name="roman"/>
+      <ref name="sans-serif"/>
+      <ref name="sc"/>
+      <ref name="strike"/>
+      <ref name="underline"/>
+    </choice>
+  </define>
+  <!-- PHRASE CLASS ELEMENTS -->
+  <!--
+    Small inline elements, that surround a word
+    or phrase in the text because the subject
+    (content) should be identified as something
+    special or different.
+  -->
+  <define name="phrase.class">
+    <choice>
+      <ref name="abbrev"/>
+      <ref name="named-content"/>
+      <ref name="styled-content"/>
+    </choice>
+  </define>
+  <!-- ============================================================= -->
+  <!-- OVER-RIDE DISPLAY ELEMENTS -->
+  <!-- ============================================================= -->
+  <!-- ALTERNATIVES DISPLAY CLASS ELEMENTS -->
+  <!--
+    Display elements that can be alternatives to
+    each  other inside an alternatives element.
+  -->
+  <define name="alternatives-display.class">
+    <choice>
+      <ref name="chem-struct"/>
+      <ref name="graphic"/>
+      <ref name="inline-graphic"/>
+      <ref name="inline-supplementary-material"/>
+      <ref name="media"/>
+      <ref name="preformat"/>
+      <ref name="private-char"/>
+      <ref name="supplementary-material"/>
+      <ref name="table"/>
+      <ref name="textual-form"/>
+    </choice>
+  </define>
+  <!-- DISPLAY CLASS ELEMENTS -->
+  <!--
+    Graphical or other image-related elements.
+    The display elements may occur within
+    the text of a table cell or paragraph
+    although they are typically at the same
+    hierarchical level as a paragraph.
+  -->
+  <define name="block-display.class">
+    <choice>
+      <ref name="boxed-text"/>
+      <ref name="chem-struct-wrap"/>
+      <ref name="fig"/>
+      <ref name="graphic"/>
+      <ref name="media"/>
+      <ref name="preformat"/>
+      <ref name="supplementary-material"/>
+      <ref name="table-wrap"/>
+    </choice>
+  </define>
+  <!-- INLINE DISPLAY CLASS ELEMENTS -->
+  <!--
+    Non-block display elements that set or
+    display inline with the text
+  -->
+  <define name="inline-display.class">
+    <choice>
+      <ref name="alternatives"/>
+      <ref name="inline-graphic"/>
+    </choice>
+  </define>
+  <!-- SIMPLE DISPLAY ELEMENTS -->
+  <!--
+    The simplest and most basic of the Display
+    Class elements, which may be allowed in many
+    places, for example, inside other Display
+    Class elements or inside the cell of a
+    Table
+  -->
+  <define name="simple-display.class">
+    <choice>
+      <ref name="graphic"/>
+      <ref name="media"/>
+      <ref name="preformat"/>
+    </choice>
+  </define>
+  <!-- ============================================================= -->
+  <!-- OVER-RIDE PARAGRAPH-LIKE ELEMENTS -->
+  <!-- ============================================================= -->
+  <!-- REST OF PARAGRAPH CLASS (MINUS PARAGRAPH) -->
+  <!--
+    Full paragraph class, minus the paragraph
+    element itself, so this PE can be used inside
+    the content model of a paragraph
+  -->
+  <define name="rest-of-para.class">
+    <choice>
+      <ref name="disp-quote"/>
+      <ref name="speech"/>
+      <ref name="statement"/>
+      <ref name="verse-group"/>
+    </choice>
+  </define>
+  <!-- ============================================================= -->
+  <!-- OTHER CLASS OVER-RIDES -->
+  <!-- ============================================================= -->
+  <!-- CITATION CLASS ELEMENTS -->
+  <!--
+    Reference to an external document, as used
+    within, for example, the text of a
+    paragraph
+  -->
+  <define name="citation.class">
+    <choice>
+      <ref name="element-citation"/>
+      <ref name="mixed-citation"/>
+      <ref name="nlm-citation"/>
+    </choice>
+  </define>
+  <!-- CONTRIBUTOR INFORMATION -->
+  <!-- Metadata about a contributor -->
+  <define name="contrib-info.class">
+    <choice>
+      <ref name="address"/>
+      <ref name="aff"/>
+      <ref name="aff-alternatives"/>
+      <ref name="author-comment"/>
+      <ref name="bio"/>
+      <ref name="email"/>
+      <ref name="ext-link"/>
+      <ref name="on-behalf-of"/>
+      <ref name="role"/>
+      <ref name="uri"/>
+      <ref name="xref"/>
+    </choice>
+  </define>
+  <!-- DATE CLASS ELEMENTS -->
+  <!-- Dates and other matters of history -->
+  <define name="date.class">
+    <ref name="date"/>
+  </define>
+  <!-- NAMES CLASS -->
+  <!--
+    The elements used to name the personal names
+    for individuals and the collaboration names
+    for groups
+  -->
+  <define name="name.class">
+    <choice>
+      <ref name="anonymous"/>
+      <ref name="collab"/>
+      <ref name="name"/>
+      <ref name="name-alternatives"/>
+    </choice>
+  </define>
+  <!--
+    MATHEMATICAL EXPRESSIONS
+    Deleted <tex-math>
+  -->
+  <define name="math.class">
+    <ref name="mml.math"/>
+  </define>
+</grammar>
+<!-- ================== End Authoring Classes Customization ====== -->

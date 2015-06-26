@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<grammar xmlns="http://relaxng.org/ns/structure/1.0" xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0" datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
+  <include href="JATS-articleauthcustom-classes1.ent.rng"/>
+  <include href="JATS-default-classes1.ent.rng"/>
+  <include href="JATS-articleauthcustom-mixes1.ent.rng"/>
+  <include href="JATS-default-mixes1.ent.rng"/>
+  <include href="JATS-articleauthcustom-models1.ent.rng"/>
+  <include href="JATS-common1.ent.rng"/>
+  <include href="JATS-articlemeta1.ent.rng"/>
+  <include href="JATS-backmatter1.ent.rng"/>
+  <include href="JATS-display1.ent.rng"/>
+  <include href="JATS-format1.ent.rng"/>
+  <include href="JATS-funding1.ent.rng"/>
+  <include href="JATS-link1.ent.rng"/>
+  <include href="JATS-list1.ent.rng"/>
+  <include href="JATS-math1.ent.rng"/>
+  <include href="JATS-nlmcitation1.ent.rng"/>
+  <include href="JATS-para1.ent.rng"/>
+  <include href="JATS-phrase1.ent.rng"/>
+  <include href="JATS-references1.ent.rng"/>
+  <include href="JATS-related-object1.ent.rng"/>
+  <include href="JATS-section1.ent.rng"/>
+  <include href="JATS-mathmlsetup1.ent.rng"/>
+  <include href="JATS-XHTMLtablesetup1.ent.rng"/>
+  <include href="JATS-chars1.ent.rng"/>
+  <define name="dtd-version">
+    <optional>
+      <attribute name="dtd-version" a:defaultValue="1.0">
+        <value type="string" datatypeLibrary="">1.0</value>
+      </attribute>
+    </optional>
+  </define>
+  <define name="article-atts">
+    <optional>
+      <attribute name="article-type"/>
+    </optional>
+    <ref name="dtd-version"/>
+    <optional>
+      <attribute name="specific-use"/>
+    </optional>
+    <optional>
+      <attribute name="xml:lang" a:defaultValue="en">
+        <data type="NMTOKEN"/>
+      </attribute>
+    </optional>
+    <ref name="XLINK.xmlns.attrib"/>
+    <ref name="MATHML.xmlns.attrib"/>
+    <ref name="Schema.xmlns.attrib"/>
+  </define>
+  <define name="article-short-model">
+    <ref name="front"/>
+    <ref name="body"/>
+    <optional>
+      <ref name="back"/>
+    </optional>
+  </define>
+  <define name="article">
+    <element name="article">
+      <ref name="article-attlist"/>
+      <ref name="article-short-model"/>
+    </element>
+  </define>
+  <define name="article-attlist" combine="interleave">
+    <ref name="article-atts"/>
+  </define>
+  <define name="front-model">
+    <ref name="article-meta"/>
+  </define>
+  <define name="front">
+    <element name="front">
+      <ref name="front-attlist"/>
+      <ref name="front-model"/>
+    </element>
+  </define>
+  <define name="front-attlist" combine="interleave">
+    <empty/>
+  </define>
+  <define name="body-model">
+    <zeroOrMore>
+      <ref name="para-level"/>
+    </zeroOrMore>
+    <zeroOrMore>
+      <ref name="sec-level"/>
+    </zeroOrMore>
+  </define>
+  <define name="body">
+    <element name="body">
+      <ref name="body-attlist"/>
+      <ref name="body-model"/>
+    </element>
+  </define>
+  <define name="body-attlist" combine="interleave">
+    <empty/>
+  </define>
+  <define name="back-model">
+    <optional>
+      <ref name="ack"/>
+    </optional>
+    <optional>
+      <ref name="glossary"/>
+    </optional>
+    <zeroOrMore>
+      <ref name="ref-list.class"/>
+    </zeroOrMore>
+    <optional>
+      <ref name="app-group"/>
+    </optional>
+  </define>
+  <define name="back">
+    <element name="back">
+      <ref name="back-attlist"/>
+      <ref name="back-model"/>
+    </element>
+  </define>
+  <define name="back-attlist" combine="interleave">
+    <empty/>
+  </define>
+  <start>
+    <choice>
+      <ref name="article"/>
+      <ref name="pub-date"/>
+      <ref name="publisher"/>
+      <ref name="milestone-start"/>
+      <ref name="tex-math"/>
+      <ref name="issue-sponsor"/>
+      <ref name="author-notes"/>
+      <ref name="alt-title"/>
+      <ref name="trans-abstract"/>
+      <ref name="trans-title-group"/>
+      <ref name="overline-start"/>
+      <ref name="counts"/>
+      <ref name="unstructured-kwd-group"/>
+      <ref name="custom-meta-group"/>
+      <ref name="underline-end"/>
+      <ref name="string-date"/>
+      <ref name="underline-start"/>
+      <ref name="milestone-end"/>
+      <ref name="x"/>
+      <ref name="sec-meta"/>
+      <ref name="history"/>
+      <ref name="sig-block"/>
+      <ref name="article-categories"/>
+      <ref name="floats-group"/>
+      <ref name="article-id"/>
+      <ref name="overline-end"/>
+    </choice>
+  </start>
+</grammar>
