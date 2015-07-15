@@ -473,16 +473,6 @@
     for individuals and the collaboration names
     for groups.
   -->
-  <define name="name.class">
-    <choice>
-      <ref name="anonymous"/>
-      <ref name="collab"/>
-      <ref name="collab-alternatives"/>
-      <ref name="name"/>
-      <ref name="name-alternatives"/>
-      <ref name="string-name"/>
-    </choice>
-  </define>
   <!-- PERSONAL NAMES CLASS -->
   <!--
     The element components of a person's name,
@@ -503,6 +493,9 @@
     inside citations, but some tag sets restrict
     its use in metadata. A one-element class.
   -->
+  <define name="string-name.class">
+    <ref name="string-name"/>
+  </define>
   <!-- RECIPIENT NAMES CLASS -->
   <!--
     The elements used to name the personal names
@@ -609,12 +602,6 @@
   </define>
   <!-- DATE CLASS ELEMENTS -->
   <!-- Dates and other matters of history -->
-  <define name="date.class">
-    <choice>
-      <ref name="date"/>
-      <ref name="string-date"/>
-    </choice>
-  </define>
   <!-- DATE PARTS CLASS ELEMENTS -->
   <!-- Components of date-style elements -->
   <define name="date-parts.class">
@@ -719,14 +706,8 @@
     The <unstructured-kwd-group> element for use 
     by itself.
   -->
-  <define name="unstructured-kwd-group.class">
-    <ref name="unstructured-kwd-group"/>
-  </define>
   <!-- STRING DATE CLASS -->
   <!-- The <string-date> element for use by itself. -->
-  <define name="string-date.class">
-    <ref name="string-date"/>
-  </define>
   <!-- ============================================================= -->
   <!-- BACK MATTER CLASSES (%backmatter.ent;) -->
   <!-- ============================================================= -->
@@ -755,14 +736,6 @@
     Ancillary elements, typically used in the
     front matter of an article, book, etc.  .
   -->
-  <define name="front.class">
-    <choice>
-      <ref name="ack"/>
-      <ref name="bio"/>
-      <ref name="fn-group"/>
-      <ref name="glossary"/>
-    </choice>
-  </define>
   <!-- FRONT AND BACK CLASS -->
   <!--
     Ancillary elements, typically used in the
@@ -857,23 +830,6 @@
     <choice>
       <ref name="address"/>
       <ref name="alternatives"/>
-      <ref name="array"/>
-      <ref name="boxed-text"/>
-      <ref name="chem-struct-wrap"/>
-      <ref name="code"/>
-      <ref name="fig"/>
-      <ref name="fig-group"/>
-      <ref name="graphic"/>
-      <ref name="media"/>
-      <ref name="preformat"/>
-      <ref name="supplementary-material"/>
-      <ref name="table-wrap"/>
-      <ref name="table-wrap-group"/>
-    </choice>
-  </define>
-  <define name="block-display-noalt.class">
-    <choice>
-      <ref name="address"/>
       <ref name="array"/>
       <ref name="boxed-text"/>
       <ref name="chem-struct-wrap"/>
@@ -1104,49 +1060,12 @@
     to accomplish this, as soon as they are
     available.
   -->
-  <define name="emphasis.class">
-    <choice>
-      <ref name="bold"/>
-      <ref name="fixed-case"/>
-      <ref name="italic"/>
-      <ref name="monospace"/>
-      <ref name="overline"/>
-      <ref name="overline-start"/>
-      <ref name="overline-end"/>
-      <ref name="roman"/>
-      <ref name="sans-serif"/>
-      <ref name="sc"/>
-      <ref name="strike"/>
-      <ref name="underline"/>
-      <ref name="underline-start"/>
-      <ref name="underline-end"/>
-      <ref name="ruby"/>
-    </choice>
-  </define>
   <!-- FACE MARKUP ELEMENTS -->
   <!--
     All of the emphasis/rendition elements
     except <ruby>, for use (initially) inside
     <ruby> itself.
   -->
-  <define name="face-markup.class">
-    <choice>
-      <ref name="bold"/>
-      <ref name="fixed-case"/>
-      <ref name="italic"/>
-      <ref name="monospace"/>
-      <ref name="overline"/>
-      <ref name="overline-start"/>
-      <ref name="overline-end"/>
-      <ref name="roman"/>
-      <ref name="sans-serif"/>
-      <ref name="sc"/>
-      <ref name="strike"/>
-      <ref name="underline"/>
-      <ref name="underline-start"/>
-      <ref name="underline-end"/>
-    </choice>
-  </define>
   <!-- UP/DOWN RENDITION ELEMENTS -->
   <define name="subsup.class">
     <choice>
@@ -1509,9 +1428,6 @@
   </define>
   <!-- JUST REFERENCE CLASS -->
   <!-- The element <ref> for use in models. -->
-  <define name="ref.class">
-    <ref name="ref"/>
-  </define>
   <!-- ============================================================= -->
   <!-- SECTION CLASS (%section.ent;) -->
   <!-- ============================================================= -->

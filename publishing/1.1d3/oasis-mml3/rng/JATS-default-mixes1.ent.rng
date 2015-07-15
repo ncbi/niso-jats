@@ -243,17 +243,18 @@
     earlier release and backwards compatibility
     must be maintained.
   -->
+  <define name="doc-back-matter-mix">
+    <choice>
+      <ref name="back.class"/>
+      <ref name="front-back.class"/>
+      <ref name="sec.class"/>
+    </choice>
+  </define>
   <!-- SECTION BACK MATTER ELEMENTS -->
   <!--
     Back matter elements used inside smaller
     structures, such as sections and sidebars
   -->
-  <define name="sec-back-matter-mix">
-    <choice>
-      <ref name="front-back.class"/>
-      <ref name="sec-back.class"/>
-    </choice>
-  </define>
   <!-- ============================================================= -->
   <!-- PARAGRAPH-LEVEL ELEMENT MIXES -->
   <!-- ============================================================= -->
@@ -278,6 +279,17 @@
     places. Thus the DTD must allow for them to
     be in either or both.
   -->
+  <define name="para-level">
+    <choice>
+      <ref name="block-display.class"/>
+      <ref name="block-math.class"/>
+      <ref name="list.class"/>
+      <ref name="math.class"/>
+      <ref name="nothing-but-para.class"/>
+      <ref name="related-article.class"/>
+      <ref name="rest-of-para.class"/>
+    </choice>
+  </define>
   <!-- ============================================================= -->
   <!-- TABLE ELEMENT MIXES -->
   <!-- ============================================================= -->
@@ -296,6 +308,26 @@
     defined in the course of the XHTML Table DTD,
     a DTD not under control of this DTD Suite.
   -->
+  <define name="inside-cell">
+    <choice>
+      <ref name="address-link.class"/>
+      <ref name="appearance.class"/>
+      <ref name="article-link.class"/>
+      <ref name="block-math.class"/>
+      <ref name="break.class"/>
+      <ref name="citation.class"/>
+      <ref name="emphasis.class"/>
+      <ref name="inline-math.class"/>
+      <ref name="list.class"/>
+      <ref name="math.class"/>
+      <ref name="nothing-but-para.class"/>
+      <ref name="phrase.class"/>
+      <ref name="simple-display.class"/>
+      <ref name="inline-display-noalt.class"/>
+      <ref name="simple-link.class"/>
+      <ref name="subsup.class"/>
+    </choice>
+  </define>
   <!-- INSIDE TABLE WRAPPER ELEMENTS -->
   <!--
     Usually a Table Wrapper contains a table,
@@ -314,83 +346,112 @@
       <ref name="table.class"/>
     </choice>
   </define>
+  <!-- ============================================================= -->
+  <!-- INLINE ELEMENT MIXES -->
+  <!-- ============================================================= -->
+  <!-- EMPHASIS MIX ELEMENTS -->
+  <!--
+    Elements that may be used inside most of the
+    emphasis class elements
+    Design Note: Inline mixes begin with an
+    OR bar
+  -->
+  <!-- JUST RENDITION -->
+  <!--
+    Only the simplest of the typographic
+    emphasis elements, as well as subscript and
+    superscript.  Usually used in a model that
+    allows #PCDATA and this restricted mixture.
+    This mix may be stripped down to only
+    subscript and superscript by some, more
+    restrictive DTDs.
+    MAINTENANCE NOTE: This Parameter Entity
+    and the related PE "rendition-plus" have
+    been put in place to restrict the amount of
+    variability that a person modifying the DTD
+    through PE redefinition can achieve. Some
+    elements have been set #PCDATA plus one PE
+    and some have been set to #PCDATA plus the
+    other in an effort to allow designers to
+    modify entire groups of elements, but not
+    to change similar models individually .
+    Design Note: Inline mixes begin with an
+    OR bar
+  -->
+  <!-- RENDITION MARKUP PLUS -->
+  <!--
+    Only the simplest of the typographic
+    emphasis elements, as well as subscript and
+    superscript.  Usually used in a model that
+    allows #PCDATA and this restricted mixture.
+    This mix may be enhanced slightly in some
+    more permissive DTDs, and should always
+    contain at least typographic emphasis,
+    subscript, and superscript.
+    MAINTENANCE NOTE:: This Parameter Entity
+    and the related PE "just-rendition" have
+    been put in place to restrict the amount of
+    variability that a person modifying the DTD
+    through PE redefinition can achieve. Some
+    elements have been set #PCDATA plus one PE
+    and some have been set to #PCDATA plus the
+    other in an effort to allow designers to
+    modify entire groups of elements, but not
+    to individually change similar models.
+    modify entire groups of elements, but not
+    to change similar models individually .
+    Design Note: Inline mixes begin with an
+    OR bar
+  -->
+  <define name="rendition-plus">
+    <choice>
+      <ref name="emphasis.class"/>
+      <ref name="subsup.class"/>
+      <ref name="phrase-content.class"/>
+    </choice>
+  </define>
+  <!-- SIMPLE PHRASE-LEVEL TEXTUAL ELEMENTS -->
+  <!--
+    Elements that may be used almost anywhere
+    text is used, for example, inside a title.
+    Simple text plus inline display and math
+    elements. In practice, This is the next step
+    up from "simple-text", adding the links.
+    Design Note: Inline mixes begin with an
+    OR bar
+  -->
+  <define name="simple-phrase">
+    <choice>
+      <ref name="address-link.class"/>
+      <ref name="article-link.class"/>
+      <ref name="emphasis.class"/>
+      <ref name="inline-display.class"/>
+      <ref name="inline-math.class"/>
+      <ref name="math.class"/>
+      <ref name="phrase.class"/>
+      <ref name="simple-link.class"/>
+      <ref name="subsup.class"/>
+    </choice>
+  </define>
+  <!-- SIMPLE TEXTUAL CONTENT -->
+  <!--
+    Elements that may be used inside elements
+    that are really expected to be #PCDATA and
+    not to contain any of these things.
+    Note that there is only inline math and no 
+    links.
+    Simpler even than %simple-phrase;
+    Design Note: Inline mixes begin with an
+    OR bar
+  -->
+  <define name="simple-text">
+    <choice>
+      <ref name="emphasis.class"/>
+      <ref name="inline-display.class"/>
+      <ref name="inline-math.class"/>
+      <ref name="phrase.class"/>
+      <ref name="subsup.class"/>
+    </choice>
+  </define>
 </grammar>
-<!-- ============================================================= -->
-<!-- INLINE ELEMENT MIXES -->
-<!-- ============================================================= -->
-<!-- EMPHASIS MIX ELEMENTS -->
-<!--
-  Elements that may be used inside most of the
-  emphasis class elements
-  Design Note: Inline mixes begin with an
-  OR bar
--->
-<!-- JUST RENDITION -->
-<!--
-  Only the simplest of the typographic
-  emphasis elements, as well as subscript and
-  superscript.  Usually used in a model that
-  allows #PCDATA and this restricted mixture.
-  This mix may be stripped down to only
-  subscript and superscript by some, more
-  restrictive DTDs.
-  MAINTENANCE NOTE: This Parameter Entity
-  and the related PE "rendition-plus" have
-  been put in place to restrict the amount of
-  variability that a person modifying the DTD
-  through PE redefinition can achieve. Some
-  elements have been set #PCDATA plus one PE
-  and some have been set to #PCDATA plus the
-  other in an effort to allow designers to
-  modify entire groups of elements, but not
-  to change similar models individually .
-  Design Note: Inline mixes begin with an
-  OR bar
--->
-<!-- RENDITION MARKUP PLUS -->
-<!--
-  Only the simplest of the typographic
-  emphasis elements, as well as subscript and
-  superscript.  Usually used in a model that
-  allows #PCDATA and this restricted mixture.
-  This mix may be enhanced slightly in some
-  more permissive DTDs, and should always
-  contain at least typographic emphasis,
-  subscript, and superscript.
-  MAINTENANCE NOTE:: This Parameter Entity
-  and the related PE "just-rendition" have
-  been put in place to restrict the amount of
-  variability that a person modifying the DTD
-  through PE redefinition can achieve. Some
-  elements have been set #PCDATA plus one PE
-  and some have been set to #PCDATA plus the
-  other in an effort to allow designers to
-  modify entire groups of elements, but not
-  to individually change similar models.
-  modify entire groups of elements, but not
-  to change similar models individually .
-  Design Note: Inline mixes begin with an
-  OR bar
--->
-<!-- SIMPLE PHRASE-LEVEL TEXTUAL ELEMENTS -->
-<!--
-  Elements that may be used almost anywhere
-  text is used, for example, inside a title.
-  Simple text plus inline display and math
-  elements. In practice, This is the next step
-  up from "simple-text", adding the links.
-  Design Note: Inline mixes begin with an
-  OR bar
--->
-<!-- SIMPLE TEXTUAL CONTENT -->
-<!--
-  Elements that may be used inside elements
-  that are really expected to be #PCDATA and
-  not to contain any of these things.
-  Note that there is only inline math and no 
-  links.
-  Simpler even than %simple-phrase;
-  Design Note: Inline mixes begin with an
-  OR bar
--->
 <!-- ================== End Archiving DTD Mixes Customization ==== -->

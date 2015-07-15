@@ -231,23 +231,6 @@
   <!-- ============================================================= -->
   <!-- FOOTNOTE ATTRIBUTES -->
   <!-- Attribute list for Footnote element -->
-  <define name="fn-atts">
-    <ref name="jats-common-atts"/>
-    <optional>
-      <attribute name="symbol"/>
-    </optional>
-    <optional>
-      <attribute name="fn-type"/>
-    </optional>
-    <optional>
-      <attribute name="specific-use"/>
-    </optional>
-    <optional>
-      <attribute name="xml:lang">
-        <data type="NMTOKEN"/>
-      </attribute>
-    </optional>
-  </define>
   <!-- INLINE SUPPLEMENTARY MATERIAL -->
   <!--
     Attribute list for inline supplementary
@@ -292,6 +275,32 @@
   </define>
   <!-- X(CROSS) REFERENCE ATTRIBUTES -->
   <!-- Attribute list for cross references -->
+  <define name="xref-atts">
+    <ref name="jats-common-atts"/>
+    <optional>
+      <attribute name="alt"/>
+    </optional>
+    <optional>
+      <attribute name="ref-type">
+        <choice>
+          <ref name="ref-types"/>
+        </choice>
+      </attribute>
+    </optional>
+    <optional>
+      <attribute name="rid">
+        <data type="IDREFS"/>
+      </attribute>
+    </optional>
+    <optional>
+      <attribute name="specific-use"/>
+    </optional>
+    <optional>
+      <attribute name="xml:lang">
+        <data type="NMTOKEN"/>
+      </attribute>
+    </optional>
+  </define>
   <!-- ============================================================= -->
   <!-- INTERNAL LINKS -->
   <!-- ============================================================= -->
@@ -412,6 +421,15 @@
     Elements for use in the
     <inline-supplementary-material> element
   -->
+  <define name="inline-supplementary-material-elements">
+    <choice>
+      <ref name="access.class"/>
+      <ref name="address-link.class"/>
+      <ref name="emphasis.class"/>
+      <ref name="phrase-content.class"/>
+      <ref name="subsup.class"/>
+    </choice>
+  </define>
   <!-- INLINE SUPPLEMENTARY MATERIAL -->
   <!--
     An in-text link to an external file that

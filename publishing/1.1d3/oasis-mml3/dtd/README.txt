@@ -1,6 +1,6 @@
-README FOR THE NISO JATS COMMITTEE DRAFT ARCHIVING AND INTERCHANGE DTD
+README FOR THE NISO JATS COMMITTEE DRAFT JOURNAL PUBLISHING DTD
 
-(Archiving (Green) Version DRAFT NISO JATS 1.1d3 March 2015)
+(Publishing (Blue) Version DRAFT NISO JATS 1.1d3 March 2015)
 
                                            March 2015
                                                
@@ -8,18 +8,18 @@ README FOR THE NISO JATS COMMITTEE DRAFT ARCHIVING AND INTERCHANGE DTD
 
 This README describes:
 
-   1.0 The Four Archiving DTDs
+   1.0 The Four Publishing DTDs
    2.0 Sample Files for Testing
    3.0 Modules Needed for each DTD
-       3.1 Modules Used in Archiving XHTML MathML 2.0 DTD
-       3.2 Modules Used in Archiving XHTML MathML 3.0 DTD
-       3.3 Modules Used in Archiving XHTML and OASIS CALS
+       3.1 Modules Used in Publishing XHTML MathML 2.0 DTD
+       3.2 Modules Used in Publishing XHTML MathML 3.0 DTD
+       3.3 Modules Used in Publishing XHTML and OASIS CALS
              Tables with MathML 2.0 DTD
-       3.4 Modules Used in Archiving XHTML and OASIS CALS
+       3.4 Modules Used in Publishing XHTML and OASIS CALS
              Tables with MathML 3.0 DTD
-       3.5 JATS Base Modules (used by all the Archiving DTDs)
+       3.5 JATS Base Modules (used by all the Publishing DTDs)
    4.0 Descriptions of All Modules
-       4.1  Modules Specific to the Archiving DTDs
+       4.1  Modules Specific to the Publishing DTDs
        4.2  JATS Base Modules: Base Modules
        4.3  JATS Base Modules: Element Class Modules
        4.4  JATS Base Modules: Notations and Special Characters
@@ -30,9 +30,9 @@ This README describes:
 
 ======================================================
 
-1.0 THE FOUR ARCHIVING DTDS
+1.0 THE FOUR PUBLISHING DTDS
 
-There are four versions of the Archiving DTD:
+There are four versions of the Publishing DTD:
 
  - A version using XHTML tables with MathML 2.0
 
@@ -45,54 +45,54 @@ There are four versions of the Archiving DTD:
      with MathML 3.0 
 
 All 4 files represent different versions of the ANSI/NISO JATS 
-Archiving and Interchange DTD. This is the DOCTYPE that covers a 
-journal article and various other non-article journal content 
-such as book and product reviews. These DTDs invoke almost 
+Journal Publishing DTD. This is the DOCTYPE that covers a 
+journal article and various other non-article journal 
+content such as book and product reviews. These DTDs invoke almost 
 all the modules in the JATS Archiving and Interchange DTD Suite. 
-An institution should choose one of these DTDs based on table and 
+An institution should choose one of these DTD based on table and 
 MathML requirements. 
 
 ======================================================
 
-2.0 SAMPLE FILES FOR TESTING GREEN (ARCHIVING)
+2.0 SAMPLE FILES FOR TESTING Blue (Publishing)
 
-samplesmall-archive1.xml 
+samplesmall-pub1.xml 
              - Minimal journal article document 
-               used to test the Archiving DTD (GREEN)
+               used to test the Publishing DTD (Blue)
                with XHTML tables and MathML 2.0.
 
-samplesmall-archive1-mathml.xml 
-             - Minimal journal article document 
-               used to test the Archiving DTD (GREEN)
+journal.elementa.000011.xml
+journal.elementa.000012.xml
+journal.elementa.000017.xml
+             - Real journal articles shared by their
+               publishers and NLM used to test the 
+               Publishing DTD (Blue)
                with XHTML tables and MathML 2.0.
-               This sample contains a MathML 2.0
-               equation that will NOT parse in MathML 3.0
-               as well as a valid MathML 3.0 equation
-               that will also parse with MathML 2.0.
 
-samplesmall-archive1-mathml3.xml
-samplesmall-archive1-mathml3-bad.xml
+samplesmall-pub1-mathml3.xml
+samplesmall-pub1-mathml3-bad.xml
              - Minimal journal article document 
-               used to test the Archiving DTD (GREEN)
+               used to test the Publishing DTD (Blue)
                with XHTML tables and MathML 3.0.
                   Two sample equations are provided,
                one of which is valid in MathML 3.0
-               and one of which contains a MathML 2.0
-               sample that is NOT valid in MathML 3.0.
+               and one of which has a MathML 2.0, sample
+               that is NOT valid in MathML 3.0.
 
-sample-archive-oasis-and-html1.xml
-             - Minimal journal article document 
-               used to test the Archiving DTD when
+samplepub-oasis-table1.xml
+samplepub-oasis-and-xhtml1.xml
+             - Minimal journal article documents 
+               used to test the Publishing DTD when
                the OASIS CALS Exchange table model
                and the XHTML model are both used
                with MathML 2.0. 
                   The OASIS table is namespaced with a 
                hard-coded namespace prefix of "oasis".
 
-sample-archive-oasis-and-html1-mathml3.xml
-sample-archive-oasis-and-html1-mathml3-bad.xml
+samplepub-oasis-and-xhtml1-mathml3.xml and 
+samplepub-oasis-and-xhtml1-mathml3-bad.xml
              - Minimal journal article document 
-               used to test the Archiving DTD when
+               used to test the Publishing DTD when
                the OASIS CALS Exchange table model
                and the XHTML model are both used
                with MathML 3.0.
@@ -100,18 +100,8 @@ sample-archive-oasis-and-html1-mathml3-bad.xml
                hard-coded namespace prefix of "oasis".
                   Two sample equations are provided,
                one of which is valid in MathML 3.0
-               and one of which contains a MathML 2.0
-               sample that is NOT valid in MathML 3.0.
-
-sample-archive-oasis-table1.xml
-             - Minimal journal article document used 
-               to test the Archiving DTD when the
-               OASIS CALS Exchange table model is
-               used instead of the XHTML model. 
-                  The OASIS table is namespaced with a 
-               namespace prefix of "oasis". 
-                  Uses MathML 2.0, but samples are also 
-               valid MathML 3.0 samples.
+               and one of which has a MathML 2.0, sample
+               that is NOT valid in MathML 3.0.
  
 ======================================================
 
@@ -119,16 +109,16 @@ sample-archive-oasis-table1.xml
  
 ------------------------------------------------------
 
-3.1 Modules Used in the Archiving XHTML MathML 2.0 DTD
+3.1 Modules Used in the Publishing XHTML MathML 2.0 DTD
 
- - JATS-archivearticle1.dtd (XHTML tables with MathML 2.0)
-      - The Archiving DTD using the XHTML table model
+ - JATS-journalpublishing1.dtd (XHTML tables with MathML 2.0)
+      - The Publishing DTD using the XHTML table model
         with MathML 2.0
 
- - JATS-archivecustom-modules1.ent 
- - JATS-archivecustom-classes1.ent
- - JATS-archivecustom-mixes1.ent
- - JATS-archivecustom-models1.ent
+ - JATS-journalpubcustom-modules1.ent 
+ - JATS-journalpubcustom-classes1.ent
+ - JATS-journalpubcustom-mixes1.ent
+ - JATS-journalpubcustom-models1.ent
  - JATS-nlmcitation1.ent
 
  - JATS-XHTMLtablesetup1.ent 
@@ -147,17 +137,17 @@ sample-archive-oasis-table1.xml
  
 ------------------------------------------------------
 
-3.2  Modules Used in the Archiving XHTML MathML 3.0 DTD
+3.2  Modules Used in the Publishing XHTML MathML 3.0 DTD
 
- - JATS-archivearticle1-mathml3.dtd (XHTML tables with 
+ - JATS-journalpublishing1-mathml3.dtd (XHTML tables with 
       MathML 3.0)
-      - The Archiving DTD using the XHTML table model
+      - The Publishing DTD using the XHTML table model
         with MathML 3.0
 
- - JATS-archivecustom-modules1.ent 
- - JATS-archivecustom-classes1.ent
- - JATS-archivecustom-mixes1.ent
- - JATS-archivecustom-models1.ent
+ - JATS-journalpubcustom-modules1.ent 
+ - JATS-journalpubcustom-classes1.ent
+ - JATS-journalpubcustom-mixes1.ent
+ - JATS-journalpubcustom-models1.ent
  - JATS-nlmcitation1.ent
 
  - JATS-XHTMLtablesetup1.ent 
@@ -177,21 +167,21 @@ sample-archive-oasis-table1.xml
  
 ------------------------------------------------------
 
-3.3  Modules Used in the Archiving XHTML and OASIS CALS
+3.3  Modules Used in the Publishing XHTML and OASIS CALS
       Tables with MathML 2.0 DTD
 
- - JATS-archive-oasis-article1.dtd
-       - An alternative Archiving DTD with one addition: 
+ - JATS-journalpublishing-oasis-article1.dtd
+       - An alternative Publishing DTD with one addition: 
          the OASIS table model is defined in addition to 
          the XHTML table model. (Both table models are
          used in this DTD, with the OASIS CALS model given 
          a hard-coded namespace prefix of "oasis".) This
          DTD uses MathML 2.0.
 
- - JATS-archive-oasis-custom-modules1.ent
- - JATS-archive-oasis-custom-classes1.ent
- - JATS-archivecustom-mixes1.ent
- - JATS-archivecustom-models1.ent
+ - JATS-journalpub-oasis-custom-modules1.ent
+ - JATS-journalpub-oasis-custom-classes1.ent
+ - JATS-journalpubcustom-mixes1.ent
+ - JATS-journalpubcustom-models1.ent
  - JATS-nlmcitation1.ent
 
  - JATS-XHTMLtablesetup1.ent 
@@ -214,21 +204,21 @@ sample-archive-oasis-table1.xml
  
 ------------------------------------------------------
 
-3.4  Modules Used in the Archiving XHTML and OASIS CALS
+3.4  Modules Used in the Publishing XHTML and OASIS CALS
       Tables with MathML 3.0 DTD
 
- - JATS-archive-oasis-article1-mathml3.dtd
-       - An alternative Archiving DTD with one addition: 
+ - JATS-journalpublishing-oasis-article1-mathml3.dtd
+       - An alternative Publishing DTD with one addition: 
          the OASIS table model is defined in addition to 
          the XHTML table model. (Both table models are
          used in this DTD, with the OASIS CALS model given 
          a hard-coded namespace prefix of "oasis".) This
          DTD uses MathML 3.0.
          
- - JATS-archive-oasis-custom-modules1.ent
- - JATS-archive-oasis-custom-classes1.ent
- - JATS-archivecustom-mixes1.ent
- - JATS-archivecustom-models1.ent
+ - JATS-journalpub-oasis-custom-modules1.ent
+ - JATS-journalpub-oasis-custom-classes1.ent
+ - JATS-journalpubcustom-mixes1.ent
+ - JATS-journalpubcustom-models1.ent
  - JATS-nlmcitation1.ent
 
  - JATS-XHTMLtablesetup1.ent 
@@ -252,7 +242,7 @@ sample-archive-oasis-table1.xml
  
 ------------------------------------------------------
 
-3.5 JATS Base Modules (used by all the Archiving DTDs)
+3.5 JATS Base Modules (used by all the Publishing DTDs)
 
 3.5.1 Base Modules
 
@@ -324,12 +314,12 @@ sample-archive-oasis-table1.xml
 4. DESCRIPTIONS of the MODULES
 
 ------------------------------------------------------
-4.1 Modules Specific to the Archiving DTDs
+4.1 Modules Specific to the Publishing DTDs
 
-JATS-archivecustom-modules1.ent 
-             - Customization module for the Archiving XHTML
-               DTDs. Names all new modules created specifically 
-               for the Archiving DTDs (therefore not part of 
+JATS-journalpubcustom-modules1.ent 
+             - Customization module for the Publishing XHTML 
+               DTDs. Names all new modules created specifically
+               for the Publishing DTDs (therefore not part of 
                the base JATS DTD Suite).
                
                This module must be called as the first 
@@ -337,14 +327,14 @@ JATS-archivecustom-modules1.ent
                Module of Modules %modules.ent;, which it
                supplements.
 
-JATS-archive-oasis-custom-modules1.ent
+JATS-journalpub-oasis-custom-modules1.ent
              - Alternate customization module for the
                DTDS that include OASIS CALS. Names all new 
-               modules created specifically for the Archiving 
+               modules created specifically for the Publishing 
                OASIS-included DTDs (therefore not part of 
                the base JATS DTD Suite). This module names
                all the specific modules needed to invoke
-               both the Archiving customizations and the
+               both the Publishing customizations and the
                OASIS CALS table modules.
                
                This module must be called as the first 
@@ -352,46 +342,46 @@ JATS-archive-oasis-custom-modules1.ent
                Module of Modules %modules.ent;, which it
                supplements.
 
-JATS-archivecustom-classes1.ent
-             - Class customizations for the Archiving XHTML 
+JATS-journalpubcustom-classes1.ent
+             - Class customizations for the Publishing XHTML 
                DTDs. Provides the DTD-specific class definitions 
-               for the Archiving DTDs. Used to over-ride 
-               the Suite default classes.
+               for the Publishing DTDs. Used to over-ride the 
+               Suite default classes.
                
-               Declared in %archivecustom-modules.ent;. 
+               Declared in %journalpubcustom-modules.ent;. 
                It must be invoked before the default classes
                module.
 
-JATS-archive-oasis-custom-classes1.ent
-             - Class customizations for the Archiving XHTML 
+JATS-journalpub-oasis-custom-classes1.ent
+             - Class customizations for the Publishing XHTML 
                and OASIS CALS DTDs. This custom classes module
-               replaces the regular journal Archiving custom
+               replaces the regular journal Publishing custom
                classes. This modules adds the parameter entities 
                needed by the OASIS table model to enable OASIS 
                Exchange CALS table processing.
                
-               Declared in %archive-oasis-custom-modules.ent;. 
+               Declared in %journalpub-oasis-custom-modules.ent;. 
                It must be invoked before the default classes
                module.
 
-JATS-archivecustom-mixes1.ent
-             - The Archiving-DTD-specific mix definitions for  
+JATS-journalpubcustom-mixes1.ent
+             - The Publishing-DTD-specific mix definitions for  
                these DTDs. Used to over-ride the Suite
                default mixes.
                
-               Declared in %archivecustom-modules.ent; 
-               and %archive-oasis-custom-modules.ent; 
+               Declared in %journalpubcustom-modules.ent; 
+               and %journalpub-oasis-custom-modules.ent; 
                for their respective DTDs.
                Must be invoked before the default mixes
                module.
 
-JATS-archivecustom-models1.ent
-             - The Archiving-DTD-specific content model 
+JATS-journalpubcustom-models1.ent
+             - The Publishing-DTD-specific content model 
                definitions for this DTD. Used to over-ride 
                the Suite default models.
                
-               Declared in %archivecustom-modules.ent; 
-               and %archive-oasis-custom-modules.ent; 
+               Declared in %journalpubcustom-modules.ent; 
+               and %journalpub-oasis-custom-modules.ent; 
                for their respective DTDs.
                Must be invoked before all of the DTD Suite
                modules since it is used to over-ride them.
@@ -470,15 +460,18 @@ JATS-default-mixes1.ent
 
 JATS-common1.ent 
                Defines all elements, attributes, entities
-               used by more than one module. This includes
-               the namespaced ALI elements, so the 
-               ALI namespace module should be declared and
-               called before this module.
+               used by more than one module.
                    
                Called after all module-of-modules modules,
                namespace modules, and all customization 
                (over-ride) modules but before all the element
                class modules. 
+
+JATS-ali-namespace1.ent  
+               Namespace setup for the NISO Access and
+               Indicators elements (prefix ali:). The
+               elements are defined in the JATS Common 
+               module (described just above).
 
 These modules need to be invoked before all other modules 
 in a DTD. Other modules can usually be invoked in any order.
@@ -575,10 +568,6 @@ Special character entity sets NOT used in MathML
 JATS-mathmlsetup1.ent  - DTD Suite module that sets the parameter
                          entities for the MathML 2.0 modules
 
-JATS-mathml3-modules1.ent 
-                      - DTD Suite module that names the modules 
-                        needed for MathML 3.0
-
 The top-level MathML 2.0 modules:
   mathml2.dtd
   mathml2-qname-1.mod
@@ -592,6 +581,10 @@ And inside the mathml subdirectory:
 JATS-mathml3-mathmlsetup1.ent - DTD Suite module that sets 
                                 the parameter entities for the 
                                 MathML 3.0 modules
+
+JATS-mathml3-modules1.ent 
+                      - DTD Suite module that names the modules 
+                        needed for MathML 3.0
 
 The top-level MathML 3.0 modules:
   mathml3.dtd

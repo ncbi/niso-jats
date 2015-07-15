@@ -212,29 +212,12 @@
 <!-- ============================================================= -->
 <!-- FLOATS GROUP ATTRIBUTES -->
 <!-- Attributes for the <floats-group> element -->
-<grammar xmlns="http://relaxng.org/ns/structure/1.0" datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
+<grammar xmlns="http://relaxng.org/ns/structure/1.0">
   <define name="floats-group-atts">
     <ref name="jats-common-atts"/>
   </define>
   <!-- SECTION ATTRIBUTES -->
   <!-- Attribute list for Section element -->
-  <define name="sec-atts">
-    <ref name="jats-common-atts"/>
-    <optional>
-      <attribute name="xml:lang">
-        <data type="NMTOKEN"/>
-      </attribute>
-    </optional>
-    <optional>
-      <attribute name="sec-type"/>
-    </optional>
-    <optional>
-      <attribute name="disp-level"/>
-    </optional>
-    <optional>
-      <attribute name="specific-use"/>
-    </optional>
-  </define>
   <!-- SECTION METADATA ATTRIBUTES -->
   <!-- Attributes for the <sec-meta> element -->
   <define name="sec-meta-atts">

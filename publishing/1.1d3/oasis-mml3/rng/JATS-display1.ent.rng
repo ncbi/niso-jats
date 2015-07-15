@@ -270,40 +270,12 @@
   Attributes used for several of the block
   display elements
 -->
+<!-- ============================================================= -->
+<!-- SPECIFIC ATTRIBUTE LISTS -->
+<!-- ============================================================= -->
+<!-- ARRAY ATTRIBUTES -->
+<!-- Attributes for the <array> element -->
 <grammar xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0" xmlns="http://relaxng.org/ns/structure/1.0" datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
-  <define name="display-atts">
-    <optional>
-      <attribute name="position" a:defaultValue="float">
-        <choice>
-          <value>anchor</value>
-          <value>background</value>
-          <value>float</value>
-          <value>margin</value>
-        </choice>
-      </attribute>
-    </optional>
-    <optional>
-      <attribute name="orientation" a:defaultValue="portrait">
-        <choice>
-          <value>portrait</value>
-          <value>landscape</value>
-        </choice>
-      </attribute>
-    </optional>
-    <optional>
-      <attribute name="specific-use"/>
-    </optional>
-    <optional>
-      <attribute name="xml:lang">
-        <data type="NMTOKEN"/>
-      </attribute>
-    </optional>
-  </define>
-  <!-- ============================================================= -->
-  <!-- SPECIFIC ATTRIBUTE LISTS -->
-  <!-- ============================================================= -->
-  <!-- ARRAY ATTRIBUTES -->
-  <!-- Attributes for the <array> element -->
   <define name="array-atts">
     <ref name="jats-common-atts"/>
     <optional>
@@ -464,30 +436,6 @@
   </define>
   <!-- INLINE GRAPHIC ATTRIBUTES -->
   <!--                     Attributes for the <inline-graphic> element -->
-  <define name="inline-graphic-atts">
-    <ref name="jats-common-atts"/>
-    <optional>
-      <attribute name="content-type"/>
-    </optional>
-    <optional>
-      <attribute name="specific-use"/>
-    </optional>
-    <optional>
-      <attribute name="baseline-shift"/>
-    </optional>
-    <optional>
-      <attribute name="mimetype"/>
-    </optional>
-    <optional>
-      <attribute name="mime-subtype"/>
-    </optional>
-    <optional>
-      <attribute name="xml:lang">
-        <data type="NMTOKEN"/>
-      </attribute>
-    </optional>
-    <ref name="link-atts"/>
-  </define>
   <!-- MEDIA ATTRIBUTES -->
   <!-- Attributes for the <media> element -->
   <define name="media-atts">
@@ -589,68 +537,11 @@
     Content model for the Figure element and any
     similarly structured elements
   -->
-  <define name="fig-model">
-    <zeroOrMore>
-      <ref name="id.class"/>
-    </zeroOrMore>
-    <optional>
-      <ref name="label"/>
-    </optional>
-    <zeroOrMore>
-      <ref name="caption.class"/>
-    </zeroOrMore>
-    <zeroOrMore>
-      <ref name="abstract.class"/>
-    </zeroOrMore>
-    <zeroOrMore>
-      <ref name="kwd-group.class"/>
-    </zeroOrMore>
-    <zeroOrMore>
-      <choice>
-        <ref name="access.class"/>
-        <ref name="address-link.class"/>
-      </choice>
-    </zeroOrMore>
-    <zeroOrMore>
-      <choice>
-        <ref name="block-math.class"/>
-        <ref name="chem-struct-wrap.class"/>
-        <ref name="intable-para.class"/>
-        <ref name="just-table.class"/>
-        <ref name="just-para.class"/>
-        <ref name="list.class"/>
-        <ref name="simple-display.class"/>
-      </choice>
-    </zeroOrMore>
-    <zeroOrMore>
-      <ref name="display-back-matter.class"/>
-    </zeroOrMore>
-  </define>
   <!-- ============================================================= -->
   <!-- ARRAY ELEMENTS -->
   <!-- ============================================================= -->
   <!-- ARRAY CONTENT MODEL -->
   <!-- Content model for the <array> element -->
-  <define name="array-model">
-    <optional>
-      <ref name="label"/>
-    </optional>
-    <zeroOrMore>
-      <choice>
-        <ref name="access.class"/>
-        <ref name="address-link.class"/>
-      </choice>
-    </zeroOrMore>
-    <choice>
-      <zeroOrMore>
-        <ref name="just-base-display.class"/>
-      </zeroOrMore>
-      <ref name="tbody.class"/>
-    </choice>
-    <zeroOrMore>
-      <ref name="display-back-matter.class"/>
-    </zeroOrMore>
-  </define>
   <!-- ARRAY (SIMPLE TABULAR ARRAY) -->
   <!--
     Used to define in-text table-like (columnar)
@@ -788,6 +679,21 @@
     characters inside a Chemical Structure
     <chem-struct>
   -->
+  <define name="chem-struct-elements">
+    <choice>
+      <ref name="access.class"/>
+      <ref name="address-link.class"/>
+      <ref name="break.class"/>
+      <ref name="emphasis.class"/>
+      <ref name="label.class"/>
+      <ref name="list.class"/>
+      <ref name="math.class"/>
+      <ref name="phrase-content.class"/>
+      <ref name="simple-display.class"/>
+      <ref name="simple-link.class"/>
+      <ref name="subsup.class"/>
+    </choice>
+  </define>
   <!-- CHEMICAL STRUCTURE MODEL -->
   <!--
     A chemical expression, reaction, equation,
@@ -824,32 +730,6 @@
   <!-- ============================================================= -->
   <!-- FIGURE GROUP MODEL -->
   <!-- Content model for a Figure Group element -->
-  <define name="fig-group-model">
-    <optional>
-      <ref name="label"/>
-    </optional>
-    <optional>
-      <ref name="caption.class"/>
-    </optional>
-    <zeroOrMore>
-      <ref name="abstract.class"/>
-    </zeroOrMore>
-    <zeroOrMore>
-      <ref name="kwd-group.class"/>
-    </zeroOrMore>
-    <zeroOrMore>
-      <choice>
-        <ref name="access.class"/>
-        <ref name="address-link.class"/>
-      </choice>
-    </zeroOrMore>
-    <zeroOrMore>
-      <choice>
-        <ref name="fig-display.class"/>
-        <ref name="just-base-display.class"/>
-      </choice>
-    </zeroOrMore>
-  </define>
   <!-- FIGURE GROUP -->
   <!--
     Used for a group of figures that must be
@@ -1271,6 +1151,19 @@
     Content model for the <table-wrap-foot>
     element
   -->
+  <define name="table-wrap-foot-model">
+    <optional>
+      <ref name="title"/>
+    </optional>
+    <oneOrMore>
+      <choice>
+        <ref name="just-para.class"/>
+        <ref name="fn-group.class"/>
+        <ref name="fn-link.class"/>
+        <ref name="display-back-matter.class"/>
+      </choice>
+    </oneOrMore>
+  </define>
   <!-- TABLE WRAP FOOTER -->
   <!--
     Wrapper element to hold a group of footnotes

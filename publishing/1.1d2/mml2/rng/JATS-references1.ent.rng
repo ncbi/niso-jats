@@ -303,12 +303,20 @@
   data characters inside the content model of
   a <source>.
 -->
-<!-- ============================================================= -->
-<!-- PARAMETER ENTITIES FOR ATTRIBUTE LISTS -->
-<!-- ============================================================= -->
-<!-- ACCESS DATE ATTRIBUTES -->
-<!-- Attributes for the <access-date> element -->
 <grammar xmlns="http://relaxng.org/ns/structure/1.0" datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
+  <define name="source-elements">
+    <choice>
+      <ref name="address-link.class"/>
+      <ref name="emphasis.class"/>
+      <ref name="phrase-content.class"/>
+      <ref name="subsup.class"/>
+    </choice>
+  </define>
+  <!-- ============================================================= -->
+  <!-- PARAMETER ENTITIES FOR ATTRIBUTE LISTS -->
+  <!-- ============================================================= -->
+  <!-- ACCESS DATE ATTRIBUTES -->
+  <!-- Attributes for the <access-date> element -->
   <define name="access-date-atts">
     <ref name="jats-common-atts"/>
     <optional>
@@ -495,22 +503,25 @@
   </define>
   <!-- PERSON GROUP ATTRIBUTES -->
   <!-- Attributes for the <person-group> element -->
-  <define name="person-group-atts">
+  <!-- PUBLICATION IDENTIFIER ATTRIBUTES -->
+  <!-- Attributes for the <pub-id> element -->
+  <define name="pub-id-atts">
     <ref name="jats-common-atts"/>
     <optional>
-      <attribute name="person-group-type"/>
+      <attribute name="pub-id-type">
+        <choice>
+          <ref name="pub-id-types"/>
+        </choice>
+      </attribute>
+    </optional>
+    <optional>
+      <attribute name="assigning-authority"/>
     </optional>
     <optional>
       <attribute name="specific-use"/>
     </optional>
-    <optional>
-      <attribute name="xml:lang">
-        <data type="NMTOKEN"/>
-      </attribute>
-    </optional>
+    <ref name="might-link-atts"/>
   </define>
-  <!-- PUBLICATION IDENTIFIER ATTRIBUTES -->
-  <!-- Attributes for the <pub-id> element -->
   <!-- REFERENCE ATTRIBUTES -->
   <!-- Attributes for the <ref> element -->
   <define name="ref-atts">
@@ -694,6 +705,23 @@
   <!-- ELEM   year         Defined in %common.ent; -->
   <!-- REFERENCE LIST MODEL -->
   <!-- Content model for the <ref-list> element -->
+  <define name="ref-list-model">
+    <optional>
+      <ref name="label"/>
+    </optional>
+    <optional>
+      <ref name="title"/>
+    </optional>
+    <zeroOrMore>
+      <ref name="para-level"/>
+    </zeroOrMore>
+    <zeroOrMore>
+      <ref name="ref"/>
+    </zeroOrMore>
+    <zeroOrMore>
+      <ref name="ref-list.class"/>
+    </zeroOrMore>
+  </define>
   <!-- REFERENCE LIST (BIBLIOGRAPHIC REFERENCE LIST) -->
   <!--
     List of references (citations) for the
@@ -790,6 +818,9 @@
     data characters inside the content model of
     the Access Date <access-date> element
   -->
+  <define name="access-date-elements">
+    <notAllowed/>
+  </define>
   <!-- ACCESS DATE FOR CITED WORK -->
   <!--
     The date on which the work which is cited
@@ -893,6 +924,9 @@
     OR bar, but since %simple-phrase; is an
     inline mix, the OR bar is already there.
   -->
+  <define name="comment-elements">
+    <ref name="simple-phrase"/>
+  </define>
   <!-- COMMENT IN A CITATION -->
   <!--
     Used to mark unstructured text within an
@@ -972,6 +1006,9 @@
     the Date Inside Citation <date-in-citation>
     element
   -->
+  <define name="date-in-citation-elements">
+    <ref name="date-parts.class"/>
+  </define>
   <!-- DATE INSIDE CITATION -->
   <!--
     A container element for any date that may be
@@ -1011,9 +1048,6 @@
     an OR bar, so this inline mix begins with
     an OR bar.
   -->
-  <define name="edition-elements">
-    <ref name="just-rendition"/>
-  </define>
   <!-- EDITION STATEMENT, CITED -->
   <!--
     The full edition statement for a cited or
@@ -1127,9 +1161,6 @@
     an OR bar, so this inline mix begins with
     an OR bar.
   -->
-  <define name="patent-elements">
-    <ref name="just-rendition"/>
-  </define>
   <!-- PATENT NUMBER, CITED -->
   <!--
     The identification information (typically the
@@ -1363,6 +1394,9 @@
     data characters inside the content model of
     a <time-stamp>.
   -->
+  <define name="time-stamp-elements">
+    <notAllowed/>
+  </define>
   <!-- TIME STAMP FOR CITED WORK -->
   <!--
     Used to record any time stamp that was
@@ -1428,9 +1462,6 @@
     an OR bar, so this inline mix begins with
     an OR bar.
   -->
-  <define name="version-elements">
-    <ref name="just-rendition"/>
-  </define>
   <!-- VERSION STATEMENT, CITED -->
   <!--
     The version number for a cited dataset or

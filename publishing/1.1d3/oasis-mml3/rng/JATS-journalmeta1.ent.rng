@@ -326,41 +326,6 @@
     Content model for the journal metadata
     element <journal-meta>
   -->
-  <define name="journal-meta-model">
-    <zeroOrMore>
-      <ref name="journal-id"/>
-    </zeroOrMore>
-    <zeroOrMore>
-      <ref name="journal-title-group"/>
-    </zeroOrMore>
-    <zeroOrMore>
-      <choice>
-        <ref name="contrib-group.class"/>
-        <ref name="aff-alternatives.class"/>
-      </choice>
-    </zeroOrMore>
-    <zeroOrMore>
-      <ref name="issn"/>
-    </zeroOrMore>
-    <optional>
-      <ref name="issn-l"/>
-    </optional>
-    <zeroOrMore>
-      <ref name="isbn"/>
-    </zeroOrMore>
-    <optional>
-      <ref name="publisher"/>
-    </optional>
-    <zeroOrMore>
-      <ref name="notes"/>
-    </zeroOrMore>
-    <zeroOrMore>
-      <ref name="self-uri"/>
-    </zeroOrMore>
-    <optional>
-      <ref name="custom-meta-group"/>
-    </optional>
-  </define>
   <!-- ELEM   journal-id   Defined in %common.ent; -->
   <!-- ELEM   issn         Defined in %common.ent; -->
   <!-- ELEM   issn-l       Defined in %common.ent; -->
@@ -440,9 +405,6 @@
     bar because %just-rendition; begins with an
     OR bar.
   -->
-  <define name="journal-title-elements">
-    <ref name="just-rendition"/>
-  </define>
   <!-- JOURNAL TITLE (FULL) -->
   <!--
     The title of the journal in which the
@@ -471,9 +433,6 @@
     data characters inside the content model of
     a <journal-subtitle>
   -->
-  <define name="journal-subtitle-elements">
-    <ref name="journal-title-elements"/>
-  </define>
   <!-- JOURNAL SUBTITLE -->
   <!--
     The subtitle of the journal in which the
@@ -488,7 +447,7 @@
       <zeroOrMore>
         <choice>
           <text/>
-          <ref name="journal-subtitle-elements"/>
+          <ref name="journal-title-elements"/>
         </choice>
       </zeroOrMore>
     </element>
@@ -505,9 +464,6 @@
     bar because %just-rendition; begins with an
     OR bar.
   -->
-  <define name="abbrev-journal-title-elements">
-    <ref name="just-rendition"/>
-  </define>
   <!-- ABBREVIATED JOURNAL TITLE -->
   <!--
     A short form of the title of the journal

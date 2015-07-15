@@ -432,6 +432,12 @@
     data characters inside the content model of
     a speaker.
   -->
+  <define name="speaker-elements">
+    <choice>
+      <ref name="person-name.class"/>
+      <ref name="simple-link.class"/>
+    </choice>
+  </define>
   <!-- SPEAKER -->
   <!--
     One who utters a speech as part of a
@@ -553,6 +559,12 @@
     OR bar, but since %simple-text; is an inline
     mix, the OR bar is already there.
   -->
+  <define name="verse-line-elements">
+    <choice>
+      <ref name="simple-text"/>
+      <ref name="simple-link.class"/>
+    </choice>
+  </define>
   <!-- LINE OF A VERSE -->
   <!--
     One line of a poem or verse

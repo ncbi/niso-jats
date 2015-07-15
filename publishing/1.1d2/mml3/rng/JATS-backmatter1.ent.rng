@@ -329,6 +329,12 @@
   </define>
   <!-- APPENDIX MODEL -->
   <!-- Content model for the <app> element. -->
+  <define name="app-model">
+    <ref name="sec-model"/>
+    <optional>
+      <ref name="permissions"/>
+    </optional>
+  </define>
   <!-- APPENDIX -->
   <!--
     Details at:
@@ -350,6 +356,17 @@
   <!-- ============================================================= -->
   <!-- FOOTNOTE GROUP MODEL -->
   <!-- Content model for the <fn-group> element -->
+  <define name="fn-group-model">
+    <optional>
+      <ref name="label"/>
+    </optional>
+    <optional>
+      <ref name="title"/>
+    </optional>
+    <oneOrMore>
+      <ref name="fn-link.class"/>
+    </oneOrMore>
+  </define>
   <!-- FOOTNOTE GROUP -->
   <!--
     Footnotes in a journal article may be

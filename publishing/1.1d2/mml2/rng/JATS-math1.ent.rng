@@ -291,6 +291,16 @@
     Elements for use in the <inline-formula>
     element
   -->
+  <define name="inline-formula-elements">
+    <choice>
+      <ref name="emphasis.class"/>
+      <ref name="inline-display.class"/>
+      <ref name="inline-math.class"/>
+      <ref name="math.class"/>
+      <ref name="phrase-content.class"/>
+      <ref name="subsup.class"/>
+    </choice>
+  </define>
   <!-- FORMULA, INLINE MODEL -->
   <!-- Content model for an <inline-formula> -->
   <define name="inline-formula-model">
@@ -327,6 +337,23 @@
     Elements for use in the <disp-formula>
     element
   -->
+  <define name="disp-formula-elements">
+    <choice>
+      <ref name="access.class"/>
+      <ref name="abstract.class"/>
+      <ref name="address-link.class"/>
+      <ref name="break.class"/>
+      <ref name="emphasis.class"/>
+      <ref name="inline-display-noalt.class"/>
+      <ref name="inline-math.class"/>
+      <ref name="kwd-group.class"/>
+      <ref name="label.class"/>
+      <ref name="phrase-content.class"/>
+      <ref name="math.class"/>
+      <ref name="simple-display.class"/>
+      <ref name="subsup.class"/>
+    </choice>
+  </define>
   <!-- FORMULA, DISPLAY MODEL -->
   <!-- Content model for an <disp-formula> -->
   <define name="disp-formula-model">

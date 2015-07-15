@@ -338,6 +338,26 @@
   <!-- ============================================================= -->
   <!-- DEFINITION LIST MODEL -->
   <!-- Content model for the <def-list> element -->
+  <define name="def-list-model">
+    <optional>
+      <ref name="label"/>
+    </optional>
+    <optional>
+      <ref name="title"/>
+    </optional>
+    <optional>
+      <ref name="term-head"/>
+    </optional>
+    <optional>
+      <ref name="def-head"/>
+    </optional>
+    <zeroOrMore>
+      <ref name="def-item.class"/>
+    </zeroOrMore>
+    <zeroOrMore>
+      <ref name="def-list.class"/>
+    </zeroOrMore>
+  </define>
   <!-- DEFINITION LIST -->
   <!--
     Details at:
@@ -452,6 +472,13 @@
     OR bar, but since %simple-phrase; is an
     inline mix, the OR bar is already there.
   -->
+  <define name="term-elements">
+    <choice>
+      <ref name="simple-phrase"/>
+      <ref name="block-math.class"/>
+      <ref name="simple-display-noalt.class"/>
+    </choice>
+  </define>
   <!-- DEFINITION LIST: TERM -->
   <!--
     The word, phrase, picture, or other noun

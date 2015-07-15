@@ -971,6 +971,10 @@
   <!-- ============================================================= -->
   <!-- RUBY WRAPPER Model -->
   <!-- Content model for the <ruby> element -->
+  <define name="ruby-model">
+    <ref name="rb"/>
+    <ref name="rt"/>
+  </define>
   <!-- RUBY WRAPPER -->
   <!--
     A Ruby textual annotation is an annotation,
@@ -1009,6 +1013,9 @@
     Those elements that may mix with the data
     characters inside a Ruby Base <rb>.
   -->
+  <define name="rb-elements">
+    <ref name="face-markup.class"/>
+  </define>
   <!-- RUBY BASE -->
   <!--
     The <rb> element is one half of a Ruby 

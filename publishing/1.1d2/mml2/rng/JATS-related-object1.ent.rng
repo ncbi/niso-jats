@@ -235,6 +235,14 @@
   <!-- ============================================================= -->
   <!-- RELATED OBJECT ELEMENTS -->
   <!-- Elements allowed inside <related-object> -->
+  <define name="related-object-elements">
+    <choice>
+      <ref name="emphasis.class"/>
+      <ref name="phrase-content.class"/>
+      <ref name="references.class"/>
+      <ref name="subsup.class"/>
+    </choice>
+  </define>
   <!-- RELATED OBJECT INFORMATION -->
   <!--
     Wrapper element, used as a container for

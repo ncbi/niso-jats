@@ -345,6 +345,9 @@
   <!-- ============================================================= -->
   <!-- ABBREVIATION ELEMENTS -->
   <!-- Elements for use in the <abbrev> element -->
+  <define name="abbrev-elements">
+    <ref name="def.class"/>
+  </define>
   <!-- ABBREVIATION OR ACRONYM -->
   <!--
     Used to identify an abbreviation or acronym
@@ -449,6 +452,23 @@
     data characters inside the content model of
     the <named-content> element
   -->
+  <define name="named-content-elements">
+    <choice>
+      <ref name="address-link.class"/>
+      <ref name="article-link.class"/>
+      <ref name="block-display.class"/>
+      <ref name="block-math.class"/>
+      <ref name="emphasis.class"/>
+      <ref name="inline-display-noalt.class"/>
+      <ref name="inline-math.class"/>
+      <ref name="list.class"/>
+      <ref name="math.class"/>
+      <ref name="phrase.class"/>
+      <ref name="simple-link.class"/>
+      <ref name="subsup.class"/>
+      <ref name="rest-of-para.class"/>
+    </choice>
+  </define>
   <!-- NAMED SPECIAL (SUBJECT) CONTENT -->
   <!--
     A semantically distinct word or phrase
@@ -487,6 +507,23 @@
     data characters inside the content model of
     the <styled-content> element
   -->
+  <define name="styled-content-elements">
+    <choice>
+      <ref name="address-link.class"/>
+      <ref name="article-link.class"/>
+      <ref name="block-display.class"/>
+      <ref name="block-math.class"/>
+      <ref name="emphasis.class"/>
+      <ref name="inline-display-noalt.class"/>
+      <ref name="inline-math.class"/>
+      <ref name="list.class"/>
+      <ref name="math.class"/>
+      <ref name="phrase.class"/>
+      <ref name="simple-link.class"/>
+      <ref name="subsup.class"/>
+      <ref name="rest-of-para.class"/>
+    </choice>
+  </define>
   <!-- STYLED SPECIAL (SUBJECT) CONTENT -->
   <!--
     A stylistically distinct word or phrase

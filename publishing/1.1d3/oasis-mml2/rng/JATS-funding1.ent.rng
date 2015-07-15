@@ -256,6 +256,22 @@
   </define>
   <!-- AWARD IDENTIFIER ATTRIBUTES -->
   <!-- Attributes for the <award-id> element -->
+  <define name="award-id-atts">
+    <ref name="jats-common-atts"/>
+    <optional>
+      <attribute name="rid">
+        <data type="IDREFS"/>
+      </attribute>
+    </optional>
+    <optional>
+      <attribute name="specific-use"/>
+    </optional>
+    <optional>
+      <attribute name="xml:lang">
+        <data type="NMTOKEN"/>
+      </attribute>
+    </optional>
+  </define>
   <!-- FUNDING GROUP ATTRIBUTES -->
   <!--
     Attributes for the <funding-group>
@@ -302,6 +318,22 @@
     Attributes for the <funding-statement>
     element
   -->
+  <define name="funding-statement-atts">
+    <ref name="jats-common-atts"/>
+    <optional>
+      <attribute name="rid">
+        <data type="IDREFS"/>
+      </attribute>
+    </optional>
+    <optional>
+      <attribute name="specific-use"/>
+    </optional>
+    <optional>
+      <attribute name="xml:lang">
+        <data type="NMTOKEN"/>
+      </attribute>
+    </optional>
+  </define>
   <!-- OPEN ACCESS ATTRIBUTES -->
   <!--
     Attributes for the <open-access>
@@ -392,6 +424,14 @@
   </define>
   <!-- FUNDING STATEMENT ELEMENTS -->
   <!-- Model for the <funding-statement> element -->
+  <define name="funding-statement-elements">
+    <choice>
+      <ref name="address-link.class"/>
+      <ref name="emphasis.class"/>
+      <ref name="phrase-content.class"/>
+      <ref name="subsup.class"/>
+    </choice>
+  </define>
   <!-- FUNDING STATEMENT -->
   <!--
     A displayable prose statement that describes
