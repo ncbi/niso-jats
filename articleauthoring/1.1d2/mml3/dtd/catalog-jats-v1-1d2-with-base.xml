@@ -554,7 +554,7 @@ Version  Reason/Occasion                   (who) vx.x (yyyy-mm-dd)
 <!--                    the Article Authoring DTDs (Pumpkin) that   -->
 <!--                    use the XHTML table model with MathML 3.0   -->
             
-  <public publicId="-//NLM//DTD JATS (Z39.96) Article Authoring DTD v1.1d2 20140930//EN"
+  <public publicId="-//NLM//DTD JATS (Z39.96) Article Authoring DTD with MathML3 v1.1d2 20140930//EN"
                uri="JATS-articleauthoring1-mathml3.dtd"/>
 
 </group>
