@@ -247,14 +247,9 @@
     conversion. The model has been restricted to
     one or more paragraphs.
   -->
-  <define name="Annotation-xml.content">
-    <oneOrMore>
-      <ref name="p"/>
-    </oneOrMore>
-  </define>
   <!-- ============================================================= -->
   <!-- MathML 2.0 INVOCATION -->
   <!-- ============================================================= -->
-  <include href="mathml2.rng"/>
+  <include href="mathml3.rng"/>
 </grammar>
 <!-- ================== End MATHML Setup Module ================== -->
