@@ -37,7 +37,6 @@
   <xs:attribute name="type">
     <xs:simpleType>
       <xs:restriction base="xs:NMTOKEN">
-        <xs:enumeration value="e-notation"/>
         <xs:enumeration value="integer"/>
         <xs:enumeration value="rational"/>
         <xs:enumeration value="real"/>

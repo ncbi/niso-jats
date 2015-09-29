@@ -146,17 +146,6 @@ value="(\+|-)?([0-9]+|[0-9]*\.[0-9]+)(((%?) *(width|lspace|height|depth))|(em|ex
         <xs:enumeration value="actuarial"/>
         <xs:enumeration value="longdiv"/>
         <xs:enumeration value="radical"/>
-        <xs:enumeration value="box"/>
-        <xs:enumeration value="roundedbox"/>
-        <xs:enumeration value="circle"/>
-        <xs:enumeration value="left"/>
-        <xs:enumeration value="right"/>
-        <xs:enumeration value="top"/>
-        <xs:enumeration value="bottom"/>
-        <xs:enumeration value="updiagonalstrike"/>
-        <xs:enumeration value="downdiagonalstrike"/>
-        <xs:enumeration value="verticalstrike"/>
-        <xs:enumeration value="horizontalstrike"/>
       </xs:restriction>
     </xs:simpleType>
   </xs:attribute>

@@ -45,7 +45,7 @@
    </xs:group>
    <xs:simpleType name="mpadded-length">
       <xs:restriction base="xs:string">
-         <xs:pattern value="\s*([\+\-]?[0-9]*([0-9]\.?|\.[0-9])[0-9]*\s*((%?\s*(height|depth|width)?)|e[mx]|in|cm|mm|p[xtc]|((negative)?((very){0,2}thi(n|ck)|medium)mathspace))?)\s*"/>
+         <xs:pattern value="\s*([\+\-]?[0-9]*(\.[0-9]*)?\s*((%?\s*(height|depth|width)?)|e[mx]|in|cm|mm|p[xtc]|((negative)?((very){0,2}thi(n|ck)|medium)mathspace)))\s*"/>
       </xs:restriction>
    </xs:simpleType>
    <xs:simpleType name="linestyle">
@@ -370,65 +370,6 @@
                <xs:enumeration value="badbreak"/>
                <xs:enumeration value="indentingnewline"/>
             </xs:restriction>
-         </xs:simpleType>
-      </xs:attribute>
-      <xs:attribute name="indentalign">
-         <xs:simpleType>
-            <xs:restriction base="xs:token">
-               <xs:enumeration value="left"/>
-               <xs:enumeration value="center"/>
-               <xs:enumeration value="right"/>
-               <xs:enumeration value="auto"/>
-               <xs:enumeration value="id"/>
-            </xs:restriction>
-         </xs:simpleType>
-      </xs:attribute>
-      <xs:attribute name="indentshift" type="m:length"/>
-      <xs:attribute name="indenttarget"/>
-      <xs:attribute name="indentalignfirst">
-         <xs:simpleType>
-            <xs:restriction base="xs:token">
-               <xs:enumeration value="left"/>
-               <xs:enumeration value="center"/>
-               <xs:enumeration value="right"/>
-               <xs:enumeration value="auto"/>
-               <xs:enumeration value="id"/>
-               <xs:enumeration value="indentalign"/>
-            </xs:restriction>
-         </xs:simpleType>
-      </xs:attribute>
-      <xs:attribute name="indentshiftfirst">
-         <xs:simpleType>
-            <xs:union memberTypes="m:length">
-               <xs:simpleType>
-                  <xs:restriction base="xs:token">
-                     <xs:enumeration value="indentshift"/>
-                  </xs:restriction>
-               </xs:simpleType>
-            </xs:union>
-         </xs:simpleType>
-      </xs:attribute>
-      <xs:attribute name="indentalignlast">
-         <xs:simpleType>
-            <xs:restriction base="xs:token">
-               <xs:enumeration value="left"/>
-               <xs:enumeration value="center"/>
-               <xs:enumeration value="right"/>
-               <xs:enumeration value="auto"/>
-               <xs:enumeration value="id"/>
-               <xs:enumeration value="indentalign"/>
-            </xs:restriction>
-         </xs:simpleType>
-      </xs:attribute>
-      <xs:attribute name="indentshiftlast">
-         <xs:simpleType>
-            <xs:union memberTypes="m:length">
-               <xs:simpleType>
-                  <xs:restriction base="xs:token">
-                     <xs:enumeration value="indentshift"/>
-                  </xs:restriction>
-               </xs:simpleType>
-            </xs:union>
          </xs:simpleType>
       </xs:attribute>
    </xs:attributeGroup>
@@ -1710,7 +1651,7 @@
       <xs:attribute name="align">
          <xs:simpleType>
             <xs:restriction base="xs:string">
-               <xs:pattern value="\s*(top|bottom|center|baseline|axis)(\s+-?[0-9]+)?\s*"/>
+               <xs:pattern value="\s*(top|bottom|center|baseline|axis)\s*[0-9]*"/>
             </xs:restriction>
          </xs:simpleType>
       </xs:attribute>
@@ -1956,7 +1897,7 @@
       <xs:attribute name="align">
          <xs:simpleType>
             <xs:restriction base="xs:string">
-               <xs:pattern value="\s*(top|bottom|center|baseline|axis)(\s+-?[0-9]+)?\s*"/>
+               <xs:pattern value="\s*(top|bottom|center|baseline|axis)\s*[0-9]*"/>
             </xs:restriction>
          </xs:simpleType>
       </xs:attribute>
@@ -2145,7 +2086,7 @@
    <xs:attributeGroup name="maction.attributes">
       <xs:attributeGroup ref="m:CommonAtt"/>
       <xs:attributeGroup ref="m:CommonPresAtt"/>
-      <xs:attribute name="actiontype" use="required"/>
+      <xs:attribute name="actiontype"/>
       <xs:attribute name="selection" type="m:positive-integer"/>
    </xs:attributeGroup>
 </xs:schema>

@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<!-- NOTE: in order not to confuse some Schema processors, an import statement
+     in this schema for the XLink namesapce has been revised to point to the same 
+     schema module as are used by the main NCBI modules. -->
+
 <xs:schema 
   xmlns:xs="http://www.w3.org/2001/XMLSchema"
   xmlns="http://www.w3.org/1998/Math/MathML"
@@ -23,6 +27,7 @@
 xs:import namespace="http://www.w3.org/1999/xlink" schemaLocation="xlink-href.xsd"/ -->
 
 <xs:import/> <!-- import any foreign namespace -->
+
 
 <!-- The type of "class" is from the XHTML modularization with Schema
      document -->

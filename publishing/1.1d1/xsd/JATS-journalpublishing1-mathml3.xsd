@@ -1,5 +1,6 @@
-<?xml version="1.0" encoding="utf-8"?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:xlink="http://www.w3.org/1999/xlink" elementFormDefault="qualified">
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" 
+xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:xlink="http://www.w3.org/1999/xlink">
   <xs:import namespace="http://www.w3.org/1998/Math/MathML" schemaLocation="mathml3/mathml3.xsd"/>
   <xs:import namespace="http://www.w3.org/1999/xlink" schemaLocation="xlink.xsd"/>
   <xs:import namespace="http://www.w3.org/XML/1998/namespace" schemaLocation="xml.xsd"/>
@@ -81,7 +82,8 @@
         </xs:simpleType>
       </xs:attribute>
       <xs:attribute name="rid" type="xs:IDREFS"/>
-      <xs:attribute name="specific-use"/><xs:attribute ref="xlink:type"/>
+      <xs:attribute name="specific-use"/>
+      <xs:attribute ref="xlink:type"/>
       <xs:attribute ref="xlink:href"/>
       <xs:attribute ref="xlink:role"/>
       <xs:attribute ref="xlink:title"/>
@@ -101,7 +103,7 @@
       <xs:attribute ref="xml:base"/>
       <xs:attribute name="content-type"/>
       <xs:attribute name="specific-use"/>
-      <xs:attribute  ref="xml:lang"/>
+      <xs:attribute ref="xml:lang"/>
     </xs:complexType>
   </xs:element>
   <xs:element name="copyright-statement">
@@ -130,7 +132,7 @@
       <xs:attribute ref="xml:base"/>
       <xs:attribute name="content-type"/>
       <xs:attribute name="specific-use"/>
-      <xs:attribute  ref="xml:lang"/>
+      <xs:attribute ref="xml:lang"/>
     </xs:complexType>
   </xs:element>
   <xs:element name="copyright-year">
@@ -150,7 +152,8 @@
       <xs:attribute ref="xml:base"/>
       <xs:attribute name="license-type"/>
       <xs:attribute name="specific-use"/>
-      <xs:attribute  ref="xml:lang"/><xs:attribute ref="xlink:type"/>
+      <xs:attribute ref="xml:lang"/>
+      <xs:attribute ref="xlink:type"/>
       <xs:attribute ref="xlink:href"/>
       <xs:attribute ref="xlink:role"/>
       <xs:attribute ref="xlink:title"/>
@@ -284,7 +287,7 @@
       </xs:choice>
       <xs:attribute name="id" type="xs:ID"/>
       <xs:attribute ref="xml:base"/>
-      <xs:attribute  ref="xml:lang"/>
+      <xs:attribute ref="xml:lang"/>
     </xs:complexType>
   </xs:element>
   <xs:element name="aff">
@@ -326,7 +329,7 @@
       <xs:attribute name="content-type"/>
       <xs:attribute name="rid" type="xs:IDREFS"/>
       <xs:attribute name="specific-use"/>
-      <xs:attribute  ref="xml:lang"/>
+      <xs:attribute ref="xml:lang"/>
     </xs:complexType>
   </xs:element>
   <xs:element name="aff-alternatives">
@@ -346,7 +349,7 @@
       <xs:attribute name="calendar"/>
       <xs:attribute name="content-type"/>
       <xs:attribute name="specific-use"/>
-      <xs:attribute  ref="xml:lang"/>
+      <xs:attribute ref="xml:lang"/>
     </xs:complexType>
   </xs:element>
   <xs:element name="conf-loc">
@@ -355,7 +358,7 @@
       <xs:attribute ref="xml:base"/>
       <xs:attribute name="content-type"/>
       <xs:attribute name="specific-use"/>
-      <xs:attribute  ref="xml:lang"/>
+      <xs:attribute ref="xml:lang"/>
     </xs:complexType>
   </xs:element>
   <xs:element name="conf-name">
@@ -364,7 +367,7 @@
       <xs:attribute ref="xml:base"/>
       <xs:attribute name="content-type"/>
       <xs:attribute name="specific-use"/>
-      <xs:attribute  ref="xml:lang"/>
+      <xs:attribute ref="xml:lang"/>
     </xs:complexType>
   </xs:element>
   <xs:element name="conf-sponsor">
@@ -377,7 +380,7 @@
       <xs:attribute ref="xml:base"/>
       <xs:attribute name="content-type"/>
       <xs:attribute name="specific-use"/>
-      <xs:attribute  ref="xml:lang"/>
+      <xs:attribute ref="xml:lang"/>
     </xs:complexType>
   </xs:element>
   <xs:element name="object-id">
@@ -422,7 +425,7 @@
       <xs:attribute name="content-type"/>
       <xs:attribute name="seq"/>
       <xs:attribute name="specific-use"/>
-      <xs:attribute  ref="xml:lang"/>
+      <xs:attribute ref="xml:lang"/>
     </xs:complexType>
   </xs:element>
   <xs:element name="issue-id">
@@ -432,7 +435,7 @@
       <xs:attribute name="pub-id-type"/>
       <xs:attribute name="content-type"/>
       <xs:attribute name="specific-use"/>
-      <xs:attribute  ref="xml:lang"/>
+      <xs:attribute ref="xml:lang"/>
     </xs:complexType>
   </xs:element>
   <xs:element name="issue-part">
@@ -441,7 +444,7 @@
       <xs:attribute ref="xml:base"/>
       <xs:attribute name="content-type"/>
       <xs:attribute name="specific-use"/>
-      <xs:attribute  ref="xml:lang"/>
+      <xs:attribute ref="xml:lang"/>
     </xs:complexType>
   </xs:element>
   <xs:element name="issue-sponsor">
@@ -450,7 +453,7 @@
       <xs:attribute ref="xml:base"/>
       <xs:attribute name="content-type"/>
       <xs:attribute name="specific-use"/>
-      <xs:attribute  ref="xml:lang"/>
+      <xs:attribute ref="xml:lang"/>
     </xs:complexType>
   </xs:element>
   <xs:element name="issue-title">
@@ -459,7 +462,7 @@
       <xs:attribute ref="xml:base"/>
       <xs:attribute name="content-type"/>
       <xs:attribute name="specific-use"/>
-      <xs:attribute  ref="xml:lang"/>
+      <xs:attribute ref="xml:lang"/>
     </xs:complexType>
   </xs:element>
   <xs:element name="journal-id">
@@ -468,7 +471,7 @@
       <xs:attribute ref="xml:base"/>
       <xs:attribute name="journal-id-type"/>
       <xs:attribute name="specific-use"/>
-      <xs:attribute  ref="xml:lang"/>
+      <xs:attribute ref="xml:lang"/>
     </xs:complexType>
   </xs:element>
   <xs:element name="role">
@@ -494,7 +497,7 @@
       <xs:attribute ref="xml:base"/>
       <xs:attribute name="content-type"/>
       <xs:attribute name="specific-use"/>
-      <xs:attribute  ref="xml:lang"/>
+      <xs:attribute ref="xml:lang"/>
     </xs:complexType>
   </xs:element>
   <xs:element name="trans-title-group">
@@ -507,7 +510,7 @@
       <xs:attribute ref="xml:base"/>
       <xs:attribute name="content-type"/>
       <xs:attribute name="specific-use"/>
-      <xs:attribute  ref="xml:lang"/>
+      <xs:attribute ref="xml:lang"/>
     </xs:complexType>
   </xs:element>
   <xs:element name="trans-subtitle">
@@ -552,7 +555,7 @@
       <xs:attribute name="id" type="xs:ID"/>
       <xs:attribute ref="xml:base"/>
       <xs:attribute name="specific-use"/>
-      <xs:attribute  ref="xml:lang"/>
+      <xs:attribute ref="xml:lang"/>
     </xs:complexType>
   </xs:element>
   <xs:element name="trans-title">
@@ -598,7 +601,7 @@
       <xs:attribute ref="xml:base"/>
       <xs:attribute name="content-type"/>
       <xs:attribute name="specific-use"/>
-      <xs:attribute  ref="xml:lang"/>
+      <xs:attribute ref="xml:lang"/>
     </xs:complexType>
   </xs:element>
   <xs:element name="volume">
@@ -608,7 +611,7 @@
       <xs:attribute name="seq"/>
       <xs:attribute name="content-type"/>
       <xs:attribute name="specific-use"/>
-      <xs:attribute  ref="xml:lang"/>
+      <xs:attribute ref="xml:lang"/>
     </xs:complexType>
   </xs:element>
   <xs:element name="volume-id">
@@ -618,7 +621,7 @@
       <xs:attribute name="pub-id-type"/>
       <xs:attribute name="content-type"/>
       <xs:attribute name="specific-use"/>
-      <xs:attribute  ref="xml:lang"/>
+      <xs:attribute ref="xml:lang"/>
     </xs:complexType>
   </xs:element>
   <xs:element name="volume-series">
@@ -627,7 +630,7 @@
       <xs:attribute ref="xml:base"/>
       <xs:attribute name="content-type"/>
       <xs:attribute name="specific-use"/>
-      <xs:attribute  ref="xml:lang"/>
+      <xs:attribute ref="xml:lang"/>
     </xs:complexType>
   </xs:element>
   <xs:element name="anonymous">
@@ -635,7 +638,7 @@
       <xs:attribute name="id" type="xs:ID"/>
       <xs:attribute ref="xml:base"/>
       <xs:attribute name="specific-use"/>
-      <xs:attribute  ref="xml:lang"/>
+      <xs:attribute ref="xml:lang"/>
     </xs:complexType>
   </xs:element>
   <xs:element name="etal">
@@ -643,7 +646,7 @@
       <xs:attribute name="id" type="xs:ID"/>
       <xs:attribute ref="xml:base"/>
       <xs:attribute name="specific-use"/>
-      <xs:attribute  ref="xml:lang"/>
+      <xs:attribute ref="xml:lang"/>
     </xs:complexType>
   </xs:element>
   <xs:element name="on-behalf-of">
@@ -673,7 +676,7 @@
       <xs:attribute name="id" type="xs:ID"/>
       <xs:attribute ref="xml:base"/>
       <xs:attribute name="specific-use"/>
-      <xs:attribute  ref="xml:lang"/>
+      <xs:attribute ref="xml:lang"/>
     </xs:complexType>
   </xs:element>
   <xs:element name="publisher">
@@ -696,7 +699,7 @@
       <xs:attribute name="id" type="xs:ID"/>
       <xs:attribute ref="xml:base"/>
       <xs:attribute name="specific-use"/>
-      <xs:attribute  ref="xml:lang"/>
+      <xs:attribute ref="xml:lang"/>
     </xs:complexType>
   </xs:element>
   <xs:element name="publisher-loc">
@@ -709,7 +712,7 @@
       <xs:attribute name="id" type="xs:ID"/>
       <xs:attribute ref="xml:base"/>
       <xs:attribute name="specific-use"/>
-      <xs:attribute  ref="xml:lang"/>
+      <xs:attribute ref="xml:lang"/>
     </xs:complexType>
   </xs:element>
   <xs:element name="fpage">
@@ -719,7 +722,7 @@
       <xs:attribute name="content-type"/>
       <xs:attribute name="seq"/>
       <xs:attribute name="specific-use"/>
-      <xs:attribute  ref="xml:lang"/>
+      <xs:attribute ref="xml:lang"/>
     </xs:complexType>
   </xs:element>
   <xs:element name="lpage">
@@ -728,7 +731,7 @@
       <xs:attribute ref="xml:base"/>
       <xs:attribute name="content-type"/>
       <xs:attribute name="specific-use"/>
-      <xs:attribute  ref="xml:lang"/>
+      <xs:attribute ref="xml:lang"/>
     </xs:complexType>
   </xs:element>
   <xs:element name="page-range">
@@ -737,7 +740,7 @@
       <xs:attribute ref="xml:base"/>
       <xs:attribute name="content-type"/>
       <xs:attribute name="specific-use"/>
-      <xs:attribute  ref="xml:lang"/>
+      <xs:attribute ref="xml:lang"/>
     </xs:complexType>
   </xs:element>
   <xs:element name="size">
@@ -746,7 +749,7 @@
       <xs:attribute ref="xml:base"/>
       <xs:attribute name="units" use="required"/>
       <xs:attribute name="specific-use"/>
-      <xs:attribute  ref="xml:lang"/>
+      <xs:attribute ref="xml:lang"/>
     </xs:complexType>
   </xs:element>
   <xs:element name="elocation-id">
@@ -860,7 +863,8 @@
       <xs:attribute name="publisher-type"/>
       <xs:attribute name="publication-format"/>
       <xs:attribute name="specific-use"/>
-      <xs:attribute  ref="xml:lang"/><xs:attribute ref="xlink:type"/>
+      <xs:attribute ref="xml:lang"/>
+      <xs:attribute ref="xlink:type"/>
       <xs:attribute ref="xlink:href"/>
       <xs:attribute ref="xlink:role"/>
       <xs:attribute ref="xlink:title"/>
@@ -959,7 +963,8 @@
       <xs:attribute name="publisher-type"/>
       <xs:attribute name="publication-format"/>
       <xs:attribute name="specific-use"/>
-      <xs:attribute  ref="xml:lang"/><xs:attribute ref="xlink:type"/>
+      <xs:attribute ref="xml:lang"/>
+      <xs:attribute ref="xlink:type"/>
       <xs:attribute ref="xlink:href"/>
       <xs:attribute ref="xlink:role"/>
       <xs:attribute ref="xlink:title"/>
@@ -984,7 +989,7 @@
       <xs:attribute ref="xml:base"/>
       <xs:attribute name="content-type"/>
       <xs:attribute name="specific-use"/>
-      <xs:attribute  ref="xml:lang"/>
+      <xs:attribute ref="xml:lang"/>
     </xs:complexType>
   </xs:element>
   <xs:element name="addr-line">
@@ -1023,7 +1028,7 @@
       <xs:attribute ref="xml:base"/>
       <xs:attribute name="content-type"/>
       <xs:attribute name="specific-use"/>
-      <xs:attribute  ref="xml:lang"/>
+      <xs:attribute ref="xml:lang"/>
     </xs:complexType>
   </xs:element>
   <xs:element name="country">
@@ -1033,7 +1038,7 @@
       <xs:attribute name="content-type"/>
       <xs:attribute name="country"/>
       <xs:attribute name="specific-use"/>
-      <xs:attribute  ref="xml:lang"/>
+      <xs:attribute ref="xml:lang"/>
     </xs:complexType>
   </xs:element>
   <xs:element name="email">
@@ -1042,7 +1047,8 @@
       <xs:attribute ref="xml:base"/>
       <xs:attribute name="content-type"/>
       <xs:attribute name="specific-use"/>
-      <xs:attribute  ref="xml:lang"/><xs:attribute ref="xlink:type"/>
+      <xs:attribute ref="xml:lang"/>
+      <xs:attribute ref="xlink:type"/>
       <xs:attribute ref="xlink:href"/>
       <xs:attribute ref="xlink:role"/>
       <xs:attribute ref="xlink:title"/>
@@ -1068,7 +1074,8 @@
       <xs:attribute ref="xml:base"/>
       <xs:attribute name="content-type"/>
       <xs:attribute name="specific-use"/>
-      <xs:attribute  ref="xml:lang"/><xs:attribute ref="xlink:type"/>
+      <xs:attribute ref="xml:lang"/>
+      <xs:attribute ref="xlink:type"/>
       <xs:attribute ref="xlink:href"/>
       <xs:attribute ref="xlink:role"/>
       <xs:attribute ref="xlink:title"/>
@@ -1083,7 +1090,7 @@
       <xs:attribute name="institution-id-type"/>
       <xs:attribute name="content-type"/>
       <xs:attribute name="specific-use"/>
-      <xs:attribute  ref="xml:lang"/>
+      <xs:attribute ref="xml:lang"/>
     </xs:complexType>
   </xs:element>
   <xs:element name="institution-wrap">
@@ -1110,7 +1117,8 @@
       <xs:attribute ref="xml:base"/>
       <xs:attribute name="content-type"/>
       <xs:attribute name="specific-use"/>
-      <xs:attribute  ref="xml:lang"/><xs:attribute ref="xlink:type"/>
+      <xs:attribute ref="xml:lang"/>
+      <xs:attribute ref="xlink:type"/>
       <xs:attribute ref="xlink:href"/>
       <xs:attribute ref="xlink:role"/>
       <xs:attribute ref="xlink:title"/>
@@ -1151,7 +1159,7 @@
       <xs:attribute ref="xml:base"/>
       <xs:attribute name="supplement-type"/>
       <xs:attribute name="specific-use"/>
-      <xs:attribute  ref="xml:lang"/>
+      <xs:attribute ref="xml:lang"/>
     </xs:complexType>
   </xs:element>
   <xs:element name="date">
@@ -1182,7 +1190,7 @@
       <xs:attribute ref="xml:base"/>
       <xs:attribute name="content-type"/>
       <xs:attribute name="specific-use"/>
-      <xs:attribute  ref="xml:lang"/>
+      <xs:attribute ref="xml:lang"/>
     </xs:complexType>
   </xs:element>
   <xs:element name="month">
@@ -1191,7 +1199,7 @@
       <xs:attribute ref="xml:base"/>
       <xs:attribute name="content-type"/>
       <xs:attribute name="specific-use"/>
-      <xs:attribute  ref="xml:lang"/>
+      <xs:attribute ref="xml:lang"/>
     </xs:complexType>
   </xs:element>
   <xs:element name="season">
@@ -1200,7 +1208,7 @@
       <xs:attribute ref="xml:base"/>
       <xs:attribute name="content-type"/>
       <xs:attribute name="specific-use"/>
-      <xs:attribute  ref="xml:lang"/>
+      <xs:attribute ref="xml:lang"/>
     </xs:complexType>
   </xs:element>
   <xs:element name="era">
@@ -1209,7 +1217,7 @@
       <xs:attribute ref="xml:base"/>
       <xs:attribute name="content-type"/>
       <xs:attribute name="specific-use"/>
-      <xs:attribute  ref="xml:lang"/>
+      <xs:attribute ref="xml:lang"/>
     </xs:complexType>
   </xs:element>
   <xs:element name="year">
@@ -1220,7 +1228,7 @@
       <xs:attribute name="iso-8601-date"/>
       <xs:attribute name="calendar"/>
       <xs:attribute name="specific-use"/>
-      <xs:attribute  ref="xml:lang"/>
+      <xs:attribute ref="xml:lang"/>
     </xs:complexType>
   </xs:element>
   <xs:element name="string-date">
@@ -1238,7 +1246,7 @@
       <xs:attribute name="calendar"/>
       <xs:attribute name="content-type"/>
       <xs:attribute name="specific-use"/>
-      <xs:attribute  ref="xml:lang"/>
+      <xs:attribute ref="xml:lang"/>
     </xs:complexType>
   </xs:element>
   <xs:element name="collab-alternatives">
@@ -1300,7 +1308,8 @@
       <xs:attribute ref="xml:base"/>
       <xs:attribute name="collab-type"/>
       <xs:attribute name="specific-use"/>
-      <xs:attribute  ref="xml:lang"/><xs:attribute ref="xlink:type"/>
+      <xs:attribute ref="xml:lang"/>
+      <xs:attribute ref="xlink:type"/>
       <xs:attribute ref="xlink:href"/>
       <xs:attribute ref="xlink:role"/>
       <xs:attribute ref="xlink:title"/>
@@ -1315,7 +1324,7 @@
       <xs:attribute name="contrib-id-type"/>
       <xs:attribute name="content-type"/>
       <xs:attribute name="specific-use"/>
-      <xs:attribute  ref="xml:lang"/>
+      <xs:attribute ref="xml:lang"/>
     </xs:complexType>
   </xs:element>
   <xs:element name="name-alternatives">
@@ -1355,7 +1364,7 @@
         </xs:simpleType>
       </xs:attribute>
       <xs:attribute name="specific-use"/>
-      <xs:attribute  ref="xml:lang"/>
+      <xs:attribute ref="xml:lang"/>
     </xs:complexType>
   </xs:element>
   <xs:element name="string-name">
@@ -1381,7 +1390,7 @@
         </xs:simpleType>
       </xs:attribute>
       <xs:attribute name="specific-use"/>
-      <xs:attribute  ref="xml:lang"/>
+      <xs:attribute ref="xml:lang"/>
     </xs:complexType>
   </xs:element>
   <xs:element name="degrees">
@@ -1390,7 +1399,7 @@
       <xs:attribute ref="xml:base"/>
       <xs:attribute name="content-type"/>
       <xs:attribute name="specific-use"/>
-      <xs:attribute  ref="xml:lang"/>
+      <xs:attribute ref="xml:lang"/>
     </xs:complexType>
   </xs:element>
   <xs:element name="given-names">
@@ -1413,7 +1422,7 @@
       <xs:attribute ref="xml:base"/>
       <xs:attribute name="content-type"/>
       <xs:attribute name="specific-use"/>
-      <xs:attribute  ref="xml:lang"/>
+      <xs:attribute ref="xml:lang"/>
     </xs:complexType>
   </xs:element>
   <xs:element name="suffix">
@@ -1422,7 +1431,7 @@
       <xs:attribute ref="xml:base"/>
       <xs:attribute name="content-type"/>
       <xs:attribute name="specific-use"/>
-      <xs:attribute  ref="xml:lang"/>
+      <xs:attribute ref="xml:lang"/>
     </xs:complexType>
   </xs:element>
   <xs:element name="ext-link">
@@ -1448,7 +1457,8 @@
       <xs:attribute ref="xml:base"/>
       <xs:attribute name="ext-link-type"/>
       <xs:attribute name="specific-use"/>
-      <xs:attribute  ref="xml:lang"/><xs:attribute ref="xlink:type"/>
+      <xs:attribute ref="xml:lang"/>
+      <xs:attribute ref="xlink:type"/>
       <xs:attribute ref="xlink:href"/>
       <xs:attribute ref="xlink:role"/>
       <xs:attribute ref="xlink:title"/>
@@ -1497,7 +1507,7 @@
       <xs:attribute name="id" type="xs:ID"/>
       <xs:attribute ref="xml:base"/>
       <xs:attribute name="specific-use"/>
-      <xs:attribute  ref="xml:lang"/>
+      <xs:attribute ref="xml:lang"/>
     </xs:complexType>
   </xs:element>
   <xs:element name="def">
@@ -1509,7 +1519,7 @@
       <xs:attribute ref="xml:base"/>
       <xs:attribute name="rid" type="xs:IDREFS"/>
       <xs:attribute name="specific-use"/>
-      <xs:attribute  ref="xml:lang"/>
+      <xs:attribute ref="xml:lang"/>
     </xs:complexType>
   </xs:element>
   <xs:element name="label">
@@ -1537,7 +1547,7 @@
       <xs:attribute name="id" type="xs:ID"/>
       <xs:attribute ref="xml:base"/>
       <xs:attribute name="alt"/>
-      <xs:attribute  ref="xml:lang"/>
+      <xs:attribute ref="xml:lang"/>
     </xs:complexType>
   </xs:element>
   <xs:element name="price">
@@ -1560,7 +1570,7 @@
       <xs:attribute name="currency"/>
       <xs:attribute name="content-type"/>
       <xs:attribute name="specific-use"/>
-      <xs:attribute  ref="xml:lang"/>
+      <xs:attribute ref="xml:lang"/>
     </xs:complexType>
   </xs:element>
   <xs:element name="title">
@@ -1699,7 +1709,8 @@
       <xs:attribute name="journal-id"/>
       <xs:attribute name="journal-id-type"/>
       <xs:attribute name="specific-use"/>
-      <xs:attribute  ref="xml:lang"/><xs:attribute ref="xlink:type"/>
+      <xs:attribute ref="xml:lang"/>
+      <xs:attribute ref="xlink:type"/>
       <xs:attribute ref="xlink:href"/>
       <xs:attribute ref="xlink:role"/>
       <xs:attribute ref="xlink:title"/>
@@ -1769,7 +1780,7 @@
       <xs:attribute name="rid" type="xs:IDREFS"/>
       <xs:attribute name="content-type"/>
       <xs:attribute name="specific-use"/>
-      <xs:attribute  ref="xml:lang"/>
+      <xs:attribute ref="xml:lang"/>
     </xs:complexType>
   </xs:element>
   <xs:element name="ack">
@@ -1787,7 +1798,7 @@
       <xs:attribute ref="xml:base"/>
       <xs:attribute name="specific-use"/>
       <xs:attribute name="content-type"/>
-      <xs:attribute  ref="xml:lang"/>
+      <xs:attribute ref="xml:lang"/>
     </xs:complexType>
   </xs:element>
   <xs:element name="bio">
@@ -1837,7 +1848,8 @@
       <xs:attribute name="rid" type="xs:IDREFS"/>
       <xs:attribute name="content-type"/>
       <xs:attribute name="specific-use"/>
-      <xs:attribute  ref="xml:lang"/><xs:attribute ref="xlink:type"/>
+      <xs:attribute ref="xml:lang"/>
+      <xs:attribute ref="xlink:type"/>
       <xs:attribute ref="xlink:href"/>
       <xs:attribute ref="xlink:role"/>
       <xs:attribute ref="xlink:title"/>
@@ -1891,7 +1903,7 @@
       <xs:attribute ref="xml:base"/>
       <xs:attribute name="notes-type"/>
       <xs:attribute name="specific-use"/>
-      <xs:attribute  ref="xml:lang"/>
+      <xs:attribute ref="xml:lang"/>
     </xs:complexType>
   </xs:element>
   <xs:element name="alt-text">
@@ -1900,7 +1912,7 @@
       <xs:attribute ref="xml:base"/>
       <xs:attribute name="content-type"/>
       <xs:attribute name="specific-use"/>
-      <xs:attribute  ref="xml:lang"/>
+      <xs:attribute ref="xml:lang"/>
     </xs:complexType>
   </xs:element>
   <xs:element name="long-desc">
@@ -1909,7 +1921,8 @@
       <xs:attribute ref="xml:base"/>
       <xs:attribute name="content-type"/>
       <xs:attribute name="specific-use"/>
-      <xs:attribute  ref="xml:lang"/><xs:attribute ref="xlink:type"/>
+      <xs:attribute ref="xml:lang"/>
+      <xs:attribute ref="xlink:type"/>
       <xs:attribute ref="xlink:href"/>
       <xs:attribute ref="xlink:role"/>
       <xs:attribute ref="xlink:title"/>
@@ -1935,7 +1948,8 @@
       <xs:attribute name="id" type="xs:ID"/>
       <xs:attribute ref="xml:base"/>
       <xs:attribute name="specific-use"/>
-      <xs:attribute  ref="xml:lang"/><xs:attribute ref="xlink:type"/>
+      <xs:attribute ref="xml:lang"/>
+      <xs:attribute ref="xlink:type"/>
       <xs:attribute ref="xlink:href"/>
       <xs:attribute ref="xlink:role"/>
       <xs:attribute ref="xlink:title"/>
@@ -2039,7 +2053,7 @@
       <xs:attribute name="id" type="xs:ID"/>
       <xs:attribute ref="xml:base"/>
       <xs:attribute name="specific-use"/>
-      <xs:attribute  ref="xml:lang"/>
+      <xs:attribute ref="xml:lang"/>
     </xs:complexType>
   </xs:element>
   <xs:element name="x">
@@ -2049,7 +2063,7 @@
       <xs:attribute name="content-type"/>
       <xs:attribute ref="xml:space"/>
       <xs:attribute name="specific-use"/>
-      <xs:attribute  ref="xml:lang"/>
+      <xs:attribute ref="xml:lang"/>
     </xs:complexType>
   </xs:element>
   <xs:element name="article-meta">
@@ -2161,7 +2175,7 @@
       <xs:attribute ref="xml:base"/>
       <xs:attribute name="subj-group-type"/>
       <xs:attribute name="specific-use"/>
-      <xs:attribute  ref="xml:lang"/>
+      <xs:attribute ref="xml:lang"/>
     </xs:complexType>
   </xs:element>
   <xs:element name="subject">
@@ -2255,7 +2269,7 @@
       <xs:attribute ref="xml:base"/>
       <xs:attribute name="content-type"/>
       <xs:attribute name="specific-use"/>
-      <xs:attribute  ref="xml:lang"/>
+      <xs:attribute ref="xml:lang"/>
     </xs:complexType>
   </xs:element>
   <xs:element name="series-text">
@@ -2281,7 +2295,7 @@
       <xs:attribute ref="xml:base"/>
       <xs:attribute name="content-type"/>
       <xs:attribute name="specific-use"/>
-      <xs:attribute  ref="xml:lang"/>
+      <xs:attribute ref="xml:lang"/>
     </xs:complexType>
   </xs:element>
   <xs:element name="author-notes">
@@ -2396,7 +2410,8 @@
       <xs:attribute ref="xml:base"/>
       <xs:attribute name="product-type"/>
       <xs:attribute name="specific-use"/>
-      <xs:attribute  ref="xml:lang"/><xs:attribute ref="xlink:type"/>
+      <xs:attribute ref="xml:lang"/>
+      <xs:attribute ref="xlink:type"/>
       <xs:attribute ref="xlink:href"/>
       <xs:attribute ref="xlink:role"/>
       <xs:attribute ref="xlink:title"/>
@@ -2419,7 +2434,8 @@
       <xs:attribute ref="xml:base"/>
       <xs:attribute name="content-type"/>
       <xs:attribute name="specific-use"/>
-      <xs:attribute  ref="xml:lang"/><xs:attribute ref="xlink:type"/>
+      <xs:attribute ref="xml:lang"/>
+      <xs:attribute ref="xlink:type"/>
       <xs:attribute ref="xlink:href"/>
       <xs:attribute ref="xlink:role"/>
       <xs:attribute ref="xlink:title"/>
@@ -2439,7 +2455,7 @@
       <xs:attribute ref="xml:base"/>
       <xs:attribute name="abstract-type"/>
       <xs:attribute name="specific-use"/>
-      <xs:attribute  ref="xml:lang"/>
+      <xs:attribute ref="xml:lang"/>
     </xs:complexType>
   </xs:element>
   <xs:element name="trans-abstract">
@@ -2454,7 +2470,7 @@
       <xs:attribute ref="xml:base"/>
       <xs:attribute name="abstract-type"/>
       <xs:attribute name="specific-use"/>
-      <xs:attribute  ref="xml:lang"/>
+      <xs:attribute ref="xml:lang"/>
     </xs:complexType>
   </xs:element>
   <xs:element name="kwd-group">
@@ -2472,7 +2488,7 @@
       <xs:attribute ref="xml:base"/>
       <xs:attribute name="kwd-group-type"/>
       <xs:attribute name="specific-use"/>
-      <xs:attribute  ref="xml:lang"/>
+      <xs:attribute ref="xml:lang"/>
     </xs:complexType>
   </xs:element>
   <xs:element name="kwd">
@@ -2561,7 +2577,7 @@
       <xs:attribute ref="xml:base"/>
       <xs:attribute name="kwd-group-type"/>
       <xs:attribute name="specific-use"/>
-      <xs:attribute  ref="xml:lang"/>
+      <xs:attribute ref="xml:lang"/>
     </xs:complexType>
   </xs:element>
   <xs:element name="corresp">
@@ -2597,7 +2613,7 @@
       <xs:attribute ref="xml:base"/>
       <xs:attribute name="content-type"/>
       <xs:attribute name="specific-use"/>
-      <xs:attribute  ref="xml:lang"/>
+      <xs:attribute ref="xml:lang"/>
     </xs:complexType>
   </xs:element>
   <xs:element name="pub-date">
@@ -2620,7 +2636,7 @@
       <xs:attribute name="date-type"/>
       <xs:attribute name="iso-8601-date"/>
       <xs:attribute name="calendar"/>
-      <xs:attribute  ref="xml:lang"/>
+      <xs:attribute ref="xml:lang"/>
     </xs:complexType>
   </xs:element>
   <xs:element name="conference">
@@ -2640,7 +2656,8 @@
       <xs:attribute ref="xml:base"/>
       <xs:attribute name="content-type"/>
       <xs:attribute name="specific-use"/>
-      <xs:attribute  ref="xml:lang"/><xs:attribute ref="xlink:type"/>
+      <xs:attribute ref="xml:lang"/>
+      <xs:attribute ref="xlink:type"/>
       <xs:attribute ref="xlink:href"/>
       <xs:attribute ref="xlink:role"/>
       <xs:attribute ref="xlink:title"/>
@@ -2654,7 +2671,7 @@
       <xs:attribute ref="xml:base"/>
       <xs:attribute name="content-type"/>
       <xs:attribute name="specific-use"/>
-      <xs:attribute  ref="xml:lang"/>
+      <xs:attribute ref="xml:lang"/>
     </xs:complexType>
   </xs:element>
   <xs:element name="conf-num">
@@ -2663,7 +2680,7 @@
       <xs:attribute ref="xml:base"/>
       <xs:attribute name="content-type"/>
       <xs:attribute name="specific-use"/>
-      <xs:attribute  ref="xml:lang"/>
+      <xs:attribute ref="xml:lang"/>
     </xs:complexType>
   </xs:element>
   <xs:element name="conf-theme">
@@ -2697,7 +2714,7 @@
       <xs:attribute ref="xml:base"/>
       <xs:attribute name="content-type"/>
       <xs:attribute name="specific-use"/>
-      <xs:attribute  ref="xml:lang"/>
+      <xs:attribute ref="xml:lang"/>
     </xs:complexType>
   </xs:element>
   <xs:element name="string-conf">
@@ -2739,7 +2756,7 @@
       <xs:attribute ref="xml:base"/>
       <xs:attribute name="content-type"/>
       <xs:attribute name="specific-use"/>
-      <xs:attribute  ref="xml:lang"/>
+      <xs:attribute ref="xml:lang"/>
     </xs:complexType>
   </xs:element>
   <xs:element name="counts">
@@ -2863,7 +2880,7 @@
       <xs:attribute ref="xml:base"/>
       <xs:attribute name="content-type"/>
       <xs:attribute name="specific-use"/>
-      <xs:attribute  ref="xml:lang"/>
+      <xs:attribute ref="xml:lang"/>
     </xs:complexType>
   </xs:element>
   <xs:element name="alt-title">
@@ -2909,7 +2926,7 @@
       <xs:attribute ref="xml:base"/>
       <xs:attribute name="alt-title-type"/>
       <xs:attribute name="specific-use"/>
-      <xs:attribute  ref="xml:lang"/>
+      <xs:attribute ref="xml:lang"/>
     </xs:complexType>
   </xs:element>
   <xs:element name="author-comment">
@@ -2922,7 +2939,7 @@
       <xs:attribute ref="xml:base"/>
       <xs:attribute name="content-type"/>
       <xs:attribute name="specific-use"/>
-      <xs:attribute  ref="xml:lang"/>
+      <xs:attribute ref="xml:lang"/>
     </xs:complexType>
   </xs:element>
   <xs:element name="app-group">
@@ -2970,7 +2987,7 @@
       <xs:attribute ref="xml:base"/>
       <xs:attribute name="content-type"/>
       <xs:attribute name="specific-use"/>
-      <xs:attribute  ref="xml:lang"/>
+      <xs:attribute ref="xml:lang"/>
     </xs:complexType>
   </xs:element>
   <xs:element name="app">
@@ -3027,7 +3044,7 @@
       <xs:attribute ref="xml:base"/>
       <xs:attribute name="content-type"/>
       <xs:attribute name="specific-use"/>
-      <xs:attribute  ref="xml:lang"/>
+      <xs:attribute ref="xml:lang"/>
     </xs:complexType>
   </xs:element>
   <xs:element name="fn-group">
@@ -3041,7 +3058,7 @@
       <xs:attribute ref="xml:base"/>
       <xs:attribute name="content-type"/>
       <xs:attribute name="specific-use"/>
-      <xs:attribute  ref="xml:lang"/>
+      <xs:attribute ref="xml:lang"/>
     </xs:complexType>
   </xs:element>
   <xs:element name="glossary">
@@ -3084,7 +3101,7 @@
       <xs:attribute ref="xml:base"/>
       <xs:attribute name="content-type"/>
       <xs:attribute name="specific-use"/>
-      <xs:attribute  ref="xml:lang"/>
+      <xs:attribute ref="xml:lang"/>
     </xs:complexType>
   </xs:element>
   <xs:element name="array">
@@ -3122,7 +3139,7 @@
           </xs:restriction>
         </xs:simpleType>
       </xs:attribute>
-      <xs:attribute  ref="xml:lang"/>
+      <xs:attribute ref="xml:lang"/>
     </xs:complexType>
   </xs:element>
   <xs:element name="boxed-text">
@@ -3193,7 +3210,7 @@
         </xs:simpleType>
       </xs:attribute>
       <xs:attribute name="specific-use"/>
-      <xs:attribute  ref="xml:lang"/>
+      <xs:attribute ref="xml:lang"/>
       <xs:attribute name="content-type"/>
     </xs:complexType>
   </xs:element>
@@ -3247,7 +3264,7 @@
         </xs:simpleType>
       </xs:attribute>
       <xs:attribute name="specific-use"/>
-      <xs:attribute  ref="xml:lang"/>
+      <xs:attribute ref="xml:lang"/>
       <xs:attribute name="content-type"/>
     </xs:complexType>
   </xs:element>
@@ -3294,7 +3311,8 @@
       <xs:attribute ref="xml:base"/>
       <xs:attribute name="content-type"/>
       <xs:attribute name="specific-use"/>
-      <xs:attribute  ref="xml:lang"/><xs:attribute ref="xlink:type"/>
+      <xs:attribute ref="xml:lang"/>
+      <xs:attribute ref="xlink:type"/>
       <xs:attribute ref="xlink:href"/>
       <xs:attribute ref="xlink:role"/>
       <xs:attribute ref="xlink:title"/>
@@ -3344,7 +3362,7 @@
         </xs:simpleType>
       </xs:attribute>
       <xs:attribute name="specific-use"/>
-      <xs:attribute  ref="xml:lang"/>
+      <xs:attribute ref="xml:lang"/>
       <xs:attribute name="content-type"/>
     </xs:complexType>
   </xs:element>
@@ -3408,7 +3426,7 @@
         </xs:simpleType>
       </xs:attribute>
       <xs:attribute name="specific-use"/>
-      <xs:attribute  ref="xml:lang"/>
+      <xs:attribute ref="xml:lang"/>
       <xs:attribute name="fig-type"/>
     </xs:complexType>
   </xs:element>
@@ -3422,7 +3440,7 @@
       <xs:attribute ref="xml:base"/>
       <xs:attribute name="content-type"/>
       <xs:attribute name="specific-use"/>
-      <xs:attribute  ref="xml:lang"/>
+      <xs:attribute ref="xml:lang"/>
       <xs:attribute name="style"/>
     </xs:complexType>
   </xs:element>
@@ -3463,10 +3481,11 @@
         </xs:simpleType>
       </xs:attribute>
       <xs:attribute name="specific-use"/>
-      <xs:attribute  ref="xml:lang"/>
+      <xs:attribute ref="xml:lang"/>
       <xs:attribute name="content-type"/>
       <xs:attribute name="mime-subtype"/>
-      <xs:attribute name="mimetype"/><xs:attribute ref="xlink:type"/>
+      <xs:attribute name="mimetype"/>
+      <xs:attribute ref="xlink:type"/>
       <xs:attribute ref="xlink:href" use="required"/>
       <xs:attribute ref="xlink:role"/>
       <xs:attribute ref="xlink:title"/>
@@ -3511,10 +3530,11 @@
         </xs:simpleType>
       </xs:attribute>
       <xs:attribute name="specific-use"/>
-      <xs:attribute  ref="xml:lang"/>
+      <xs:attribute ref="xml:lang"/>
       <xs:attribute name="content-type"/>
       <xs:attribute name="mimetype"/>
-      <xs:attribute name="mime-subtype"/><xs:attribute ref="xlink:type"/>
+      <xs:attribute name="mime-subtype"/>
+      <xs:attribute ref="xlink:type"/>
       <xs:attribute ref="xlink:href" use="required"/>
       <xs:attribute ref="xlink:role"/>
       <xs:attribute ref="xlink:title"/>
@@ -3534,7 +3554,8 @@
       <xs:attribute name="mimetype"/>
       <xs:attribute name="mime-subtype"/>
       <xs:attribute name="specific-use"/>
-      <xs:attribute  ref="xml:lang"/><xs:attribute ref="xlink:type"/>
+      <xs:attribute ref="xml:lang"/>
+      <xs:attribute ref="xlink:type"/>
       <xs:attribute ref="xlink:href" use="required"/>
       <xs:attribute ref="xlink:role"/>
       <xs:attribute ref="xlink:title"/>
@@ -3592,7 +3613,7 @@
         </xs:simpleType>
       </xs:attribute>
       <xs:attribute name="specific-use"/>
-      <xs:attribute  ref="xml:lang"/>
+      <xs:attribute ref="xml:lang"/>
       <xs:attribute name="preformat-type"/>
       <xs:attribute ref="xml:space"/>
     </xs:complexType>
@@ -3659,7 +3680,7 @@
         </xs:simpleType>
       </xs:attribute>
       <xs:attribute name="specific-use"/>
-      <xs:attribute  ref="xml:lang"/>
+      <xs:attribute ref="xml:lang"/>
       <xs:attribute ref="xml:space"/>
     </xs:complexType>
   </xs:element>
@@ -3723,10 +3744,11 @@
         </xs:simpleType>
       </xs:attribute>
       <xs:attribute name="specific-use"/>
-      <xs:attribute  ref="xml:lang"/>
+      <xs:attribute ref="xml:lang"/>
       <xs:attribute name="content-type"/>
       <xs:attribute name="mimetype"/>
-      <xs:attribute name="mime-subtype"/><xs:attribute ref="xlink:type"/>
+      <xs:attribute name="mime-subtype"/>
+      <xs:attribute ref="xlink:type"/>
       <xs:attribute ref="xlink:href"/>
       <xs:attribute ref="xlink:role"/>
       <xs:attribute ref="xlink:title"/>
@@ -3771,7 +3793,7 @@
         </xs:simpleType>
       </xs:attribute>
       <xs:attribute name="specific-use"/>
-      <xs:attribute  ref="xml:lang"/>
+      <xs:attribute ref="xml:lang"/>
       <xs:attribute name="content-type"/>
     </xs:complexType>
   </xs:element>
@@ -3832,7 +3854,7 @@
         </xs:simpleType>
       </xs:attribute>
       <xs:attribute name="specific-use"/>
-      <xs:attribute  ref="xml:lang"/>
+      <xs:attribute ref="xml:lang"/>
       <xs:attribute name="content-type"/>
     </xs:complexType>
   </xs:element>
@@ -4530,7 +4552,7 @@
       <xs:attribute ref="xml:base"/>
       <xs:attribute name="content-type"/>
       <xs:attribute name="specific-use"/>
-      <xs:attribute  ref="xml:lang"/>
+      <xs:attribute ref="xml:lang"/>
     </xs:complexType>
   </xs:element>
   <xs:element name="rt">
@@ -4539,7 +4561,7 @@
       <xs:attribute ref="xml:base"/>
       <xs:attribute name="content-type"/>
       <xs:attribute name="specific-use"/>
-      <xs:attribute  ref="xml:lang"/>
+      <xs:attribute ref="xml:lang"/>
     </xs:complexType>
   </xs:element>
   <xs:element name="rp">
@@ -4558,7 +4580,7 @@
       <xs:attribute name="id" type="xs:ID"/>
       <xs:attribute ref="xml:base"/>
       <xs:attribute name="specific-use"/>
-      <xs:attribute  ref="xml:lang"/>
+      <xs:attribute ref="xml:lang"/>
     </xs:complexType>
   </xs:element>
   <xs:element name="funding-statement">
@@ -4587,7 +4609,7 @@
       <xs:attribute ref="xml:base"/>
       <xs:attribute name="rid" type="xs:IDREFS"/>
       <xs:attribute name="specific-use"/>
-      <xs:attribute  ref="xml:lang"/>
+      <xs:attribute ref="xml:lang"/>
     </xs:complexType>
   </xs:element>
   <xs:element name="open-access">
@@ -4598,7 +4620,7 @@
       <xs:attribute name="id" type="xs:ID"/>
       <xs:attribute ref="xml:base"/>
       <xs:attribute name="specific-use"/>
-      <xs:attribute  ref="xml:lang"/>
+      <xs:attribute ref="xml:lang"/>
     </xs:complexType>
   </xs:element>
   <xs:element name="award-group">
@@ -4614,7 +4636,8 @@
       <xs:attribute name="rid" type="xs:IDREFS"/>
       <xs:attribute name="award-type"/>
       <xs:attribute name="specific-use"/>
-      <xs:attribute  ref="xml:lang"/><xs:attribute ref="xlink:type"/>
+      <xs:attribute ref="xml:lang"/>
+      <xs:attribute ref="xlink:type"/>
       <xs:attribute ref="xlink:href"/>
       <xs:attribute ref="xlink:role"/>
       <xs:attribute ref="xlink:title"/>
@@ -4657,7 +4680,8 @@
       <xs:attribute name="source-type"/>
       <xs:attribute name="country"/>
       <xs:attribute name="specific-use"/>
-      <xs:attribute  ref="xml:lang"/><xs:attribute ref="xlink:type"/>
+      <xs:attribute ref="xml:lang"/>
+      <xs:attribute ref="xlink:type"/>
       <xs:attribute ref="xlink:href"/>
       <xs:attribute ref="xlink:role"/>
       <xs:attribute ref="xlink:title"/>
@@ -4696,7 +4720,7 @@
       <xs:attribute ref="xml:base"/>
       <xs:attribute name="rid" type="xs:IDREFS"/>
       <xs:attribute name="specific-use"/>
-      <xs:attribute  ref="xml:lang"/>
+      <xs:attribute ref="xml:lang"/>
     </xs:complexType>
   </xs:element>
   <xs:element name="principal-award-recipient">
@@ -4712,7 +4736,7 @@
       <xs:attribute name="id" type="xs:ID"/>
       <xs:attribute ref="xml:base"/>
       <xs:attribute name="specific-use"/>
-      <xs:attribute  ref="xml:lang"/>
+      <xs:attribute ref="xml:lang"/>
     </xs:complexType>
   </xs:element>
   <xs:element name="principal-investigator">
@@ -4726,7 +4750,7 @@
       <xs:attribute name="id" type="xs:ID"/>
       <xs:attribute ref="xml:base"/>
       <xs:attribute name="specific-use"/>
-      <xs:attribute  ref="xml:lang"/>
+      <xs:attribute ref="xml:lang"/>
     </xs:complexType>
   </xs:element>
   <xs:element name="journal-meta">
@@ -4769,7 +4793,7 @@
       <xs:attribute ref="xml:base"/>
       <xs:attribute name="content-type"/>
       <xs:attribute name="specific-use"/>
-      <xs:attribute  ref="xml:lang"/>
+      <xs:attribute ref="xml:lang"/>
     </xs:complexType>
   </xs:element>
   <xs:element name="journal-subtitle">
@@ -4778,7 +4802,7 @@
       <xs:attribute ref="xml:base"/>
       <xs:attribute name="content-type"/>
       <xs:attribute name="specific-use"/>
-      <xs:attribute  ref="xml:lang"/>
+      <xs:attribute ref="xml:lang"/>
     </xs:complexType>
   </xs:element>
   <xs:element name="abbrev-journal-title">
@@ -4787,7 +4811,7 @@
       <xs:attribute ref="xml:base"/>
       <xs:attribute name="abbrev-type"/>
       <xs:attribute name="specific-use"/>
-      <xs:attribute  ref="xml:lang"/>
+      <xs:attribute ref="xml:lang"/>
     </xs:complexType>
   </xs:element>
   <xs:element name="fn">
@@ -4826,7 +4850,7 @@
       </xs:attribute>
       <xs:attribute name="specific-use"/>
       <xs:attribute name="symbol"/>
-      <xs:attribute  ref="xml:lang"/>
+      <xs:attribute ref="xml:lang"/>
     </xs:complexType>
   </xs:element>
   <xs:element name="target">
@@ -4852,7 +4876,7 @@
       <xs:attribute ref="xml:base"/>
       <xs:attribute name="target-type"/>
       <xs:attribute name="specific-use"/>
-      <xs:attribute  ref="xml:lang"/>
+      <xs:attribute ref="xml:lang"/>
     </xs:complexType>
   </xs:element>
   <xs:element name="xref">
@@ -4906,7 +4930,7 @@
       </xs:attribute>
       <xs:attribute name="rid" type="xs:IDREFS"/>
       <xs:attribute name="specific-use"/>
-      <xs:attribute  ref="xml:lang"/>
+      <xs:attribute ref="xml:lang"/>
     </xs:complexType>
   </xs:element>
   <xs:element name="inline-supplementary-material">
@@ -4939,7 +4963,8 @@
       <xs:attribute name="mimetype"/>
       <xs:attribute name="mime-subtype"/>
       <xs:attribute name="specific-use"/>
-      <xs:attribute  ref="xml:lang"/><xs:attribute ref="xlink:type"/>
+      <xs:attribute ref="xml:lang"/>
+      <xs:attribute ref="xlink:type"/>
       <xs:attribute ref="xlink:href"/>
       <xs:attribute ref="xlink:role"/>
       <xs:attribute ref="xlink:title"/>
@@ -4964,7 +4989,7 @@
       <xs:attribute name="list-content"/>
       <xs:attribute name="continued-from" type="xs:IDREF"/>
       <xs:attribute name="specific-use"/>
-      <xs:attribute  ref="xml:lang"/>
+      <xs:attribute ref="xml:lang"/>
     </xs:complexType>
   </xs:element>
   <xs:element name="term-head">
@@ -5060,7 +5085,7 @@
       <xs:attribute name="id" type="xs:ID"/>
       <xs:attribute ref="xml:base"/>
       <xs:attribute name="specific-use"/>
-      <xs:attribute  ref="xml:lang"/>
+      <xs:attribute ref="xml:lang"/>
     </xs:complexType>
   </xs:element>
   <xs:element name="term">
@@ -5112,7 +5137,7 @@
       <xs:attribute ref="xml:base"/>
       <xs:attribute name="rid" type="xs:IDREFS"/>
       <xs:attribute name="specific-use"/>
-      <xs:attribute  ref="xml:lang"/>
+      <xs:attribute ref="xml:lang"/>
     </xs:complexType>
   </xs:element>
   <xs:element name="list">
@@ -5129,7 +5154,7 @@
       <xs:attribute name="list-content"/>
       <xs:attribute name="continued-from" type="xs:IDREF"/>
       <xs:attribute name="specific-use"/>
-      <xs:attribute  ref="xml:lang"/>
+      <xs:attribute ref="xml:lang"/>
     </xs:complexType>
   </xs:element>
   <xs:element name="list-item">
@@ -5145,7 +5170,7 @@
       <xs:attribute name="id" type="xs:ID"/>
       <xs:attribute ref="xml:base"/>
       <xs:attribute name="specific-use"/>
-      <xs:attribute  ref="xml:lang"/>
+      <xs:attribute ref="xml:lang"/>
     </xs:complexType>
   </xs:element>
   <xs:element name="inline-formula">
@@ -5178,7 +5203,7 @@
       <xs:attribute ref="xml:base"/>
       <xs:attribute name="content-type"/>
       <xs:attribute name="specific-use"/>
-      <xs:attribute  ref="xml:lang"/>
+      <xs:attribute ref="xml:lang"/>
     </xs:complexType>
   </xs:element>
   <xs:element name="disp-formula">
@@ -5225,7 +5250,7 @@
       <xs:attribute ref="xml:base"/>
       <xs:attribute name="content-type"/>
       <xs:attribute name="specific-use"/>
-      <xs:attribute  ref="xml:lang"/>
+      <xs:attribute ref="xml:lang"/>
     </xs:complexType>
   </xs:element>
   <xs:element name="disp-formula-group">
@@ -5251,7 +5276,7 @@
       <xs:attribute ref="xml:base"/>
       <xs:attribute name="content-type"/>
       <xs:attribute name="specific-use"/>
-      <xs:attribute  ref="xml:lang"/>
+      <xs:attribute ref="xml:lang"/>
     </xs:complexType>
   </xs:element>
   <xs:element name="tex-math">
@@ -5323,7 +5348,8 @@
       <xs:attribute name="publisher-type"/>
       <xs:attribute name="publication-format"/>
       <xs:attribute name="specific-use"/>
-      <xs:attribute  ref="xml:lang"/><xs:attribute ref="xlink:type"/>
+      <xs:attribute ref="xml:lang"/>
+      <xs:attribute ref="xlink:type"/>
       <xs:attribute ref="xlink:href"/>
       <xs:attribute ref="xlink:role"/>
       <xs:attribute ref="xlink:title"/>
@@ -5401,7 +5427,7 @@
       <xs:attribute ref="xml:base"/>
       <xs:attribute name="content-type"/>
       <xs:attribute name="specific-use"/>
-      <xs:attribute  ref="xml:lang"/>
+      <xs:attribute ref="xml:lang"/>
     </xs:complexType>
   </xs:element>
   <xs:element name="disp-quote">
@@ -5447,7 +5473,7 @@
       <xs:attribute ref="xml:base"/>
       <xs:attribute name="content-type"/>
       <xs:attribute name="specific-use"/>
-      <xs:attribute  ref="xml:lang"/>
+      <xs:attribute ref="xml:lang"/>
     </xs:complexType>
   </xs:element>
   <xs:element name="speech">
@@ -5460,7 +5486,7 @@
       <xs:attribute ref="xml:base"/>
       <xs:attribute name="content-type"/>
       <xs:attribute name="specific-use"/>
-      <xs:attribute  ref="xml:lang"/>
+      <xs:attribute ref="xml:lang"/>
     </xs:complexType>
   </xs:element>
   <xs:element name="speaker">
@@ -5479,7 +5505,7 @@
       <xs:attribute ref="xml:base"/>
       <xs:attribute name="content-type"/>
       <xs:attribute name="specific-use"/>
-      <xs:attribute  ref="xml:lang"/>
+      <xs:attribute ref="xml:lang"/>
     </xs:complexType>
   </xs:element>
   <xs:element name="statement">
@@ -5499,7 +5525,7 @@
       <xs:attribute ref="xml:base"/>
       <xs:attribute name="content-type"/>
       <xs:attribute name="specific-use"/>
-      <xs:attribute  ref="xml:lang"/>
+      <xs:attribute ref="xml:lang"/>
     </xs:complexType>
   </xs:element>
   <xs:element name="verse-group">
@@ -5521,7 +5547,7 @@
       <xs:attribute ref="xml:base"/>
       <xs:attribute name="content-type"/>
       <xs:attribute name="specific-use"/>
-      <xs:attribute  ref="xml:lang"/>
+      <xs:attribute ref="xml:lang"/>
     </xs:complexType>
   </xs:element>
   <xs:element name="verse-line">
@@ -5558,7 +5584,7 @@
       <xs:attribute ref="xml:base"/>
       <xs:attribute name="content-type"/>
       <xs:attribute name="specific-use"/>
-      <xs:attribute  ref="xml:lang"/>
+      <xs:attribute ref="xml:lang"/>
     </xs:complexType>
   </xs:element>
   <xs:element name="abbrev">
@@ -5571,7 +5597,8 @@
       <xs:attribute name="content-type"/>
       <xs:attribute name="specific-use"/>
       <xs:attribute name="alt"/>
-      <xs:attribute  ref="xml:lang"/><xs:attribute ref="xlink:type"/>
+      <xs:attribute ref="xml:lang"/>
+      <xs:attribute ref="xlink:type"/>
       <xs:attribute ref="xlink:href"/>
       <xs:attribute ref="xlink:role"/>
       <xs:attribute ref="xlink:title"/>
@@ -5587,7 +5614,7 @@
       <xs:attribute name="content-type"/>
       <xs:attribute name="rationale"/>
       <xs:attribute name="specific-use"/>
-      <xs:attribute  ref="xml:lang"/>
+      <xs:attribute ref="xml:lang"/>
     </xs:complexType>
   </xs:element>
   <xs:element name="milestone-end">
@@ -5598,7 +5625,7 @@
       <xs:attribute name="content-type"/>
       <xs:attribute name="rationale"/>
       <xs:attribute name="specific-use"/>
-      <xs:attribute  ref="xml:lang"/>
+      <xs:attribute ref="xml:lang"/>
     </xs:complexType>
   </xs:element>
   <xs:element name="named-content">
@@ -5666,7 +5693,8 @@
       <xs:attribute name="alt"/>
       <xs:attribute name="content-type" use="required"/>
       <xs:attribute name="specific-use"/>
-      <xs:attribute  ref="xml:lang"/><xs:attribute ref="xlink:type"/>
+      <xs:attribute ref="xml:lang"/>
+      <xs:attribute ref="xlink:type"/>
       <xs:attribute ref="xlink:href"/>
       <xs:attribute ref="xlink:role"/>
       <xs:attribute ref="xlink:title"/>
@@ -5747,7 +5775,7 @@
       <xs:attribute name="style-type"/>
       <xs:attribute name="alt"/>
       <xs:attribute name="specific-use"/>
-      <xs:attribute  ref="xml:lang"/>
+      <xs:attribute ref="xml:lang"/>
     </xs:complexType>
   </xs:element>
   <xs:element name="ref-list">
@@ -5791,7 +5819,7 @@
       <xs:attribute ref="xml:base"/>
       <xs:attribute name="content-type"/>
       <xs:attribute name="specific-use"/>
-      <xs:attribute  ref="xml:lang"/>
+      <xs:attribute ref="xml:lang"/>
     </xs:complexType>
   </xs:element>
   <xs:element name="ref">
@@ -5810,7 +5838,7 @@
       <xs:attribute ref="xml:base"/>
       <xs:attribute name="content-type"/>
       <xs:attribute name="specific-use"/>
-      <xs:attribute  ref="xml:lang"/>
+      <xs:attribute ref="xml:lang"/>
     </xs:complexType>
   </xs:element>
   <xs:element name="note">
@@ -5826,7 +5854,7 @@
       <xs:attribute ref="xml:base"/>
       <xs:attribute name="content-type"/>
       <xs:attribute name="specific-use"/>
-      <xs:attribute  ref="xml:lang"/>
+      <xs:attribute ref="xml:lang"/>
     </xs:complexType>
   </xs:element>
   <xs:element name="access-date">
@@ -5848,7 +5876,7 @@
       <xs:attribute ref="xml:base"/>
       <xs:attribute name="content-type"/>
       <xs:attribute name="specific-use"/>
-      <xs:attribute  ref="xml:lang"/>
+      <xs:attribute ref="xml:lang"/>
     </xs:complexType>
   </xs:element>
   <xs:element name="chapter-title">
@@ -5876,7 +5904,7 @@
       <xs:attribute name="id" type="xs:ID"/>
       <xs:attribute ref="xml:base"/>
       <xs:attribute name="specific-use"/>
-      <xs:attribute  ref="xml:lang"/>
+      <xs:attribute ref="xml:lang"/>
     </xs:complexType>
   </xs:element>
   <xs:element name="comment">
@@ -5921,7 +5949,7 @@
       <xs:attribute ref="xml:base"/>
       <xs:attribute name="content-type"/>
       <xs:attribute name="specific-use"/>
-      <xs:attribute  ref="xml:lang"/>
+      <xs:attribute ref="xml:lang"/>
     </xs:complexType>
   </xs:element>
   <xs:element name="date-in-citation">
@@ -5939,7 +5967,7 @@
       <xs:attribute name="calendar"/>
       <xs:attribute name="content-type"/>
       <xs:attribute name="specific-use"/>
-      <xs:attribute  ref="xml:lang"/>
+      <xs:attribute ref="xml:lang"/>
     </xs:complexType>
   </xs:element>
   <xs:element name="edition">
@@ -5949,7 +5977,7 @@
       <xs:attribute name="designator"/>
       <xs:attribute name="content-type"/>
       <xs:attribute name="specific-use"/>
-      <xs:attribute  ref="xml:lang"/>
+      <xs:attribute ref="xml:lang"/>
     </xs:complexType>
   </xs:element>
   <xs:element name="gov">
@@ -5975,7 +6003,7 @@
       <xs:attribute ref="xml:base"/>
       <xs:attribute name="content-type"/>
       <xs:attribute name="specific-use"/>
-      <xs:attribute  ref="xml:lang"/>
+      <xs:attribute ref="xml:lang"/>
     </xs:complexType>
   </xs:element>
   <xs:element name="part-title">
@@ -6003,7 +6031,7 @@
       <xs:attribute name="id" type="xs:ID"/>
       <xs:attribute ref="xml:base"/>
       <xs:attribute name="specific-use"/>
-      <xs:attribute  ref="xml:lang"/>
+      <xs:attribute ref="xml:lang"/>
     </xs:complexType>
   </xs:element>
   <xs:element name="patent">
@@ -6013,7 +6041,7 @@
       <xs:attribute name="content-type"/>
       <xs:attribute name="country"/>
       <xs:attribute name="specific-use"/>
-      <xs:attribute  ref="xml:lang"/>
+      <xs:attribute ref="xml:lang"/>
     </xs:complexType>
   </xs:element>
   <xs:element name="person-group">
@@ -6049,7 +6077,7 @@
         </xs:simpleType>
       </xs:attribute>
       <xs:attribute name="specific-use"/>
-      <xs:attribute  ref="xml:lang"/>
+      <xs:attribute ref="xml:lang"/>
     </xs:complexType>
   </xs:element>
   <xs:element name="pub-id">
@@ -6103,7 +6131,7 @@
       <xs:attribute ref="xml:base"/>
       <xs:attribute name="content-type"/>
       <xs:attribute name="specific-use"/>
-      <xs:attribute  ref="xml:lang"/>
+      <xs:attribute ref="xml:lang"/>
     </xs:complexType>
   </xs:element>
   <xs:element name="std">
@@ -6135,7 +6163,7 @@
       <xs:attribute ref="xml:base"/>
       <xs:attribute name="content-type"/>
       <xs:attribute name="specific-use"/>
-      <xs:attribute  ref="xml:lang"/>
+      <xs:attribute ref="xml:lang"/>
     </xs:complexType>
   </xs:element>
   <xs:element name="std-organization">
@@ -6150,7 +6178,7 @@
       <xs:attribute ref="xml:base"/>
       <xs:attribute name="content-type"/>
       <xs:attribute name="specific-use"/>
-      <xs:attribute  ref="xml:lang"/>
+      <xs:attribute ref="xml:lang"/>
     </xs:complexType>
   </xs:element>
   <xs:element name="source">
@@ -6179,7 +6207,7 @@
       <xs:attribute ref="xml:base"/>
       <xs:attribute name="content-type"/>
       <xs:attribute name="specific-use"/>
-      <xs:attribute  ref="xml:lang"/>
+      <xs:attribute ref="xml:lang"/>
     </xs:complexType>
   </xs:element>
   <xs:element name="time-stamp">
@@ -6216,7 +6244,7 @@
       <xs:attribute ref="xml:base"/>
       <xs:attribute name="content-type"/>
       <xs:attribute name="specific-use"/>
-      <xs:attribute  ref="xml:lang"/>
+      <xs:attribute ref="xml:lang"/>
     </xs:complexType>
   </xs:element>
   <xs:element name="related-object">
@@ -6309,7 +6337,8 @@
       <xs:attribute name="object-type"/>
       <xs:attribute name="content-type"/>
       <xs:attribute name="specific-use"/>
-      <xs:attribute  ref="xml:lang"/><xs:attribute ref="xlink:type"/>
+      <xs:attribute ref="xml:lang"/>
+      <xs:attribute ref="xlink:type"/>
       <xs:attribute ref="xlink:href"/>
       <xs:attribute ref="xlink:role"/>
       <xs:attribute ref="xlink:title"/>
@@ -6386,7 +6415,7 @@
       </xs:sequence>
       <xs:attribute name="id" type="xs:ID"/>
       <xs:attribute ref="xml:base"/>
-      <xs:attribute  ref="xml:lang"/>
+      <xs:attribute ref="xml:lang"/>
       <xs:attribute name="sec-type"/>
       <xs:attribute name="specific-use"/>
     </xs:complexType>
@@ -6917,7 +6946,7 @@
         </xs:simpleType>
       </xs:attribute>
       <xs:attribute name="specific-use"/>
-      <xs:attribute  ref="xml:lang"/>
+      <xs:attribute ref="xml:lang"/>
     </xs:complexType>
   </xs:element>
   <xs:element name="front">
@@ -7010,7 +7039,7 @@
       <xs:attribute ref="xml:base"/>
       <xs:attribute name="article-type"/>
       <xs:attribute name="specific-use"/>
-      <xs:attribute  ref="xml:lang"/>
+      <xs:attribute ref="xml:lang"/>
     </xs:complexType>
   </xs:element>
   <xs:element name="front-stub">
@@ -7085,7 +7114,7 @@
       <xs:attribute ref="xml:base"/>
       <xs:attribute name="response-type"/>
       <xs:attribute name="specific-use"/>
-      <xs:attribute  ref="xml:lang"/>
+      <xs:attribute ref="xml:lang"/>
     </xs:complexType>
   </xs:element>
 </xs:schema>
