@@ -982,22 +982,6 @@
     Display elements that can be alternatives to
     each  other inside an alternatives element.
   -->
-  <define name="alternatives-display.class">
-    <choice>
-      <ref name="array"/>
-      <ref name="chem-struct"/>
-      <ref name="code"/>
-      <ref name="graphic"/>
-      <ref name="inline-graphic"/>
-      <ref name="inline-supplementary-material"/>
-      <ref name="media"/>
-      <ref name="preformat"/>
-      <ref name="private-char"/>
-      <ref name="supplementary-material"/>
-      <ref name="table"/>
-      <ref name="textual-form"/>
-    </choice>
-  </define>
   <!-- ============================================================= -->
   <!-- MATH CLASSES (%math.ent;) -->
   <!-- ============================================================= -->
@@ -1505,9 +1489,6 @@
     can be set up for inclusion:
       XHTML Table Model    table
   -->
-  <define name="table.class">
-    <ref name="table"/>
-  </define>
   <!-- TABLE FOOT CLASS -->
   <!--
     Elements to include at the end of a table
@@ -1516,13 +1497,10 @@
   <define name="table-foot.class">
     <ref name="table-wrap-foot"/>
   </define>
-  <!-- TABLE BODY CLASS -->
-  <!--
-    To include just a table <table-wrap>
-    element
-  -->
-  <define name="tbody.class">
-    <ref name="tbody"/>
-  </define>
 </grammar>
+<!-- TABLE BODY CLASS -->
+<!--
+  To include just a table <table-wrap>
+  element
+-->
 <!-- ================== End Journal Suite Default Classes  ======= -->
